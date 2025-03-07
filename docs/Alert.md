@@ -2,27 +2,27 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**ContextAttributes** | Pointer to **map[string]string** |  | [optional] 
-**Description** | Pointer to **string** |  | [optional] 
-**Destinations** | **[]string** |  | 
-**Enabled** | Pointer to **bool** |  | [optional] 
-**Id** | Pointer to [**NullableKsuid**](Ksuid.md) |  | [optional] 
-**IsRealTime** | Pointer to **bool** |  | [optional] 
-**LastEditedBy** | Pointer to **NullableString** |  | [optional] [readonly] 
-**LastSatisfiedAt** | Pointer to **NullableInt64** | Time when alert was last satisfied. Unix timestamp. | [optional] [readonly] 
-**LastTriggeredAt** | Pointer to **NullableInt64** | Time when alert was last triggered. Unix timestamp. | [optional] [readonly] 
-**Name** | Pointer to **string** |  | [optional] 
-**OrgId** | Pointer to **string** |  | [optional] 
-**Owner** | Pointer to **NullableString** |  | [optional] 
-**QueryCondition** | Pointer to [**QueryCondition**](QueryCondition.md) |  | [optional] 
-**RowTemplate** | Pointer to **string** |  | [optional] 
-**StreamName** | Pointer to **string** |  | [optional] 
-**StreamType** | Pointer to [**StreamType**](StreamType.md) |  | [optional] 
-**TriggerCondition** | Pointer to [**TriggerCondition**](TriggerCondition.md) |  | [optional] 
-**TzOffset** | Pointer to **int32** | Timezone offset in minutes. Negative seconds means the western hemisphere | [optional] 
-**UpdatedAt** | Pointer to **NullableInt64** | Time when alert was last updated. Unix timestamp. | [optional] [readonly] 
+| Name                  | Type                                                   | Description                                                               | Notes                 |
+| --------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------- | --------------------- |
+| **ContextAttributes** | Pointer to **map[string]string**                       |                                                                           | [optional]            |
+| **Description**       | Pointer to **string**                                  |                                                                           | [optional]            |
+| **Destinations**      | **[]string**                                           |                                                                           |
+| **Enabled**           | Pointer to **bool**                                    |                                                                           | [optional]            |
+| **Id**                | Pointer to [**Nullablestring**](string.md)             |                                                                           | [optional]            |
+| **IsRealTime**        | Pointer to **bool**                                    |                                                                           | [optional]            |
+| **LastEditedBy**      | Pointer to **NullableString**                          |                                                                           | [optional] [readonly] |
+| **LastSatisfiedAt**   | Pointer to **NullableInt64**                           | Time when alert was last satisfied. Unix timestamp.                       | [optional] [readonly] |
+| **LastTriggeredAt**   | Pointer to **NullableInt64**                           | Time when alert was last triggered. Unix timestamp.                       | [optional] [readonly] |
+| **Name**              | Pointer to **string**                                  |                                                                           | [optional]            |
+| **OrgId**             | Pointer to **string**                                  |                                                                           | [optional]            |
+| **Owner**             | Pointer to **NullableString**                          |                                                                           | [optional]            |
+| **QueryCondition**    | Pointer to [**QueryCondition**](QueryCondition.md)     |                                                                           | [optional]            |
+| **RowTemplate**       | Pointer to **string**                                  |                                                                           | [optional]            |
+| **StreamName**        | Pointer to **string**                                  |                                                                           | [optional]            |
+| **StreamType**        | Pointer to [**StreamType**](StreamType.md)             |                                                                           | [optional]            |
+| **TriggerCondition**  | Pointer to [**TriggerCondition**](TriggerCondition.md) |                                                                           | [optional]            |
+| **TzOffset**          | Pointer to **int32**                                   | Timezone offset in minutes. Negative seconds means the western hemisphere | [optional]            |
+| **UpdatedAt**         | Pointer to **NullableInt64**                           | Time when alert was last updated. Unix timestamp.                         | [optional] [readonly] |
 
 ## Methods
 
@@ -72,12 +72,14 @@ HasContextAttributes returns a boolean if a field has been set.
 
 `func (o *Alert) SetContextAttributesNil(b bool)`
 
- SetContextAttributesNil sets the value for ContextAttributes to be an explicit nil
+SetContextAttributesNil sets the value for ContextAttributes to be an explicit nil
 
 ### UnsetContextAttributes
+
 `func (o *Alert) UnsetContextAttributes()`
 
 UnsetContextAttributes ensures that no value is present for ContextAttributes, not even an explicit nil
+
 ### GetDescription
 
 `func (o *Alert) GetDescription() string`
@@ -122,7 +124,6 @@ and a boolean to check if the value has been set.
 
 SetDestinations sets Destinations field to given value.
 
-
 ### GetEnabled
 
 `func (o *Alert) GetEnabled() bool`
@@ -150,20 +151,20 @@ HasEnabled returns a boolean if a field has been set.
 
 ### GetId
 
-`func (o *Alert) GetId() Ksuid`
+`func (o *Alert) GetId() string`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Alert) GetIdOk() (*Ksuid, bool)`
+`func (o *Alert) GetIdOk() (*string, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *Alert) SetId(v Ksuid)`
+`func (o *Alert) SetId(v string)`
 
 SetId sets Id field to given value.
 
@@ -177,12 +178,14 @@ HasId returns a boolean if a field has been set.
 
 `func (o *Alert) SetIdNil(b bool)`
 
- SetIdNil sets the value for Id to be an explicit nil
+SetIdNil sets the value for Id to be an explicit nil
 
 ### UnsetId
+
 `func (o *Alert) UnsetId()`
 
 UnsetId ensures that no value is present for Id, not even an explicit nil
+
 ### GetIsRealTime
 
 `func (o *Alert) GetIsRealTime() bool`
@@ -237,12 +240,14 @@ HasLastEditedBy returns a boolean if a field has been set.
 
 `func (o *Alert) SetLastEditedByNil(b bool)`
 
- SetLastEditedByNil sets the value for LastEditedBy to be an explicit nil
+SetLastEditedByNil sets the value for LastEditedBy to be an explicit nil
 
 ### UnsetLastEditedBy
+
 `func (o *Alert) UnsetLastEditedBy()`
 
 UnsetLastEditedBy ensures that no value is present for LastEditedBy, not even an explicit nil
+
 ### GetLastSatisfiedAt
 
 `func (o *Alert) GetLastSatisfiedAt() int64`
@@ -272,12 +277,14 @@ HasLastSatisfiedAt returns a boolean if a field has been set.
 
 `func (o *Alert) SetLastSatisfiedAtNil(b bool)`
 
- SetLastSatisfiedAtNil sets the value for LastSatisfiedAt to be an explicit nil
+SetLastSatisfiedAtNil sets the value for LastSatisfiedAt to be an explicit nil
 
 ### UnsetLastSatisfiedAt
+
 `func (o *Alert) UnsetLastSatisfiedAt()`
 
 UnsetLastSatisfiedAt ensures that no value is present for LastSatisfiedAt, not even an explicit nil
+
 ### GetLastTriggeredAt
 
 `func (o *Alert) GetLastTriggeredAt() int64`
@@ -307,12 +314,14 @@ HasLastTriggeredAt returns a boolean if a field has been set.
 
 `func (o *Alert) SetLastTriggeredAtNil(b bool)`
 
- SetLastTriggeredAtNil sets the value for LastTriggeredAt to be an explicit nil
+SetLastTriggeredAtNil sets the value for LastTriggeredAt to be an explicit nil
 
 ### UnsetLastTriggeredAt
+
 `func (o *Alert) UnsetLastTriggeredAt()`
 
 UnsetLastTriggeredAt ensures that no value is present for LastTriggeredAt, not even an explicit nil
+
 ### GetName
 
 `func (o *Alert) GetName() string`
@@ -392,12 +401,14 @@ HasOwner returns a boolean if a field has been set.
 
 `func (o *Alert) SetOwnerNil(b bool)`
 
- SetOwnerNil sets the value for Owner to be an explicit nil
+SetOwnerNil sets the value for Owner to be an explicit nil
 
 ### UnsetOwner
+
 `func (o *Alert) UnsetOwner()`
 
 UnsetOwner ensures that no value is present for Owner, not even an explicit nil
+
 ### GetQueryCondition
 
 `func (o *Alert) GetQueryCondition() QueryCondition`
@@ -577,13 +588,12 @@ HasUpdatedAt returns a boolean if a field has been set.
 
 `func (o *Alert) SetUpdatedAtNil(b bool)`
 
- SetUpdatedAtNil sets the value for UpdatedAt to be an explicit nil
+SetUpdatedAtNil sets the value for UpdatedAt to be an explicit nil
 
 ### UnsetUpdatedAt
+
 `func (o *Alert) UnsetUpdatedAt()`
 
 UnsetUpdatedAt ensures that no value is present for UpdatedAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

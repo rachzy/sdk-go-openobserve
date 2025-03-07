@@ -26,7 +26,7 @@ type Alert struct {
 	Description *string `json:"description,omitempty"`
 	Destinations []string `json:"destinations"`
 	Enabled *bool `json:"enabled,omitempty"`
-	Id NullableKsuid `json:"id,omitempty"`
+	Id NullableString `json:"id,omitempty"`
 	IsRealTime *bool `json:"is_real_time,omitempty"`
 	LastEditedBy NullableString `json:"last_edited_by,omitempty"`
 	// Time when alert was last satisfied. Unix timestamp.
@@ -189,9 +189,9 @@ func (o *Alert) SetEnabled(v bool) {
 }
 
 // GetId returns the Id field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *Alert) GetId() Ksuid {
+func (o *Alert) GetId() any {
 	if o == nil || IsNil(o.Id.Get()) {
-		var ret Ksuid
+		var ret any
 		return ret
 	}
 	return *o.Id.Get()
@@ -200,7 +200,7 @@ func (o *Alert) GetId() Ksuid {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *Alert) GetIdOk() (*Ksuid, bool) {
+func (o *Alert) GetIdOk() (any, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -216,8 +216,8 @@ func (o *Alert) HasId() bool {
 	return false
 }
 
-// SetId gets a reference to the given NullableKsuid and assigns it to the Id field.
-func (o *Alert) SetId(v Ksuid) {
+// SetId gets a reference to the given Nullablestring and assigns it to the Id field.
+func (o *Alert) SetId(v string) {
 	o.Id.Set(&v)
 }
 // SetIdNil sets the value for Id to be an explicit nil

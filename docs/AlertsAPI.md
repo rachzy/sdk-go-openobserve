@@ -180,7 +180,7 @@ import (
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	alertId := TODO // Ksuid | Alert ID
+	alertId := TODO // string | Alert ID
 
 	configuration := openobserve.NewConfiguration()
 	apiClient := openobserve.NewAPIClient(configuration)
@@ -200,7 +200,7 @@ func main() {
 | ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
 | **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
 | **orgId**   | **string**          | Organization name                                                           |
-| **alertId** | [**Ksuid**](.md)    | Alert ID                                                                    |
+| **alertId** | [**string**](.md)   | Alert ID                                                                    |
 
 ### Other Parameters
 
@@ -380,7 +380,7 @@ import (
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	alertId := TODO // Ksuid | Alert ID
+	alertId := TODO // string | Alert ID
 	value := true // bool | Set to `true` to enable the alert or `false` to disable the alert.
 
 	configuration := openobserve.NewConfiguration()
@@ -401,7 +401,7 @@ func main() {
 | ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
 | **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
 | **orgId**   | **string**          | Organization name                                                           |
-| **alertId** | [**Ksuid**](.md)    | Alert ID                                                                    |
+| **alertId** | [**string**](.md)   | Alert ID                                                                    |
 
 ### Other Parameters
 
@@ -520,7 +520,7 @@ import (
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	alertId := TODO // Ksuid | Alert ID
+	alertId := TODO // string | Alert ID
 
 	configuration := openobserve.NewConfiguration()
 	apiClient := openobserve.NewAPIClient(configuration)
@@ -540,7 +540,7 @@ func main() {
 | ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
 | **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
 | **orgId**   | **string**          | Organization name                                                           |
-| **alertId** | [**Ksuid**](.md)    | Alert ID                                                                    |
+| **alertId** | [**string**](.md)   | Alert ID                                                                    |
 
 ### Other Parameters
 
@@ -998,7 +998,7 @@ import (
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	moveAlertsRequestBody := *openobserve.NewMoveAlertsRequestBody([]Ksuid{"TODO"}, "DstFolderId_example") // MoveAlertsRequestBody | Identifies alerts and the destination folder
+	moveAlertsRequestBody := *openobserve.NewMoveAlertsRequestBody([]string{"TODO"}, "DstFolderId_example") // MoveAlertsRequestBody | Identifies alerts and the destination folder
 
 	configuration := openobserve.NewConfiguration()
 	apiClient := openobserve.NewAPIClient(configuration)
@@ -1134,7 +1134,7 @@ import (
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	alertId := TODO // Ksuid | Alert ID
+	alertId := TODO // string | Alert ID
 
 	configuration := openobserve.NewConfiguration()
 	apiClient := openobserve.NewAPIClient(configuration)
@@ -1154,7 +1154,7 @@ func main() {
 | ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
 | **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
 | **orgId**   | **string**          | Organization name                                                           |
-| **alertId** | [**Ksuid**](.md)    | Alert ID                                                                    |
+| **alertId** | [**string**](.md)   | Alert ID                                                                    |
 
 ### Other Parameters
 
@@ -1268,7 +1268,7 @@ import (
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	alertId := TODO // Ksuid | Alert ID
+	alertId := TODO // string | Alert ID
 	body := Alert(987) // Alert | Alert data
 
 	configuration := openobserve.NewConfiguration()
@@ -1289,7 +1289,7 @@ func main() {
 | ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
 | **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
 | **orgId**   | **string**          | Organization name                                                           |
-| **alertId** | [**Ksuid**](.md)    | Alert ID                                                                    |
+| **alertId** | [**string**](.md)   | Alert ID                                                                    |
 
 ### Other Parameters
 

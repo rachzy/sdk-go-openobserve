@@ -23,7 +23,7 @@ var _ MappedNullable = &MoveAlertsRequestBody{}
 // MoveAlertsRequestBody HTTP request body for `MoveAlerts` endpoint.
 type MoveAlertsRequestBody struct {
 	// IDs of the alerts to move.
-	AlertIds []Ksuid `json:"alert_ids"`
+	AlertIds []string `json:"alert_ids"`
 	// Indicates the folder to which alerts should be moved.
 	DstFolderId string `json:"dst_folder_id"`
 }
@@ -34,7 +34,7 @@ type _MoveAlertsRequestBody MoveAlertsRequestBody
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewMoveAlertsRequestBody(alertIds []Ksuid, dstFolderId string) *MoveAlertsRequestBody {
+func NewMoveAlertsRequestBody(alertIds []string, dstFolderId string) *MoveAlertsRequestBody {
 	this := MoveAlertsRequestBody{}
 	this.AlertIds = alertIds
 	this.DstFolderId = dstFolderId
@@ -50,9 +50,9 @@ func NewMoveAlertsRequestBodyWithDefaults() *MoveAlertsRequestBody {
 }
 
 // GetAlertIds returns the AlertIds field value
-func (o *MoveAlertsRequestBody) GetAlertIds() []Ksuid {
+func (o *MoveAlertsRequestBody) GetAlertIds() []string {
 	if o == nil {
-		var ret []Ksuid
+		var ret []string
 		return ret
 	}
 
@@ -61,7 +61,7 @@ func (o *MoveAlertsRequestBody) GetAlertIds() []Ksuid {
 
 // GetAlertIdsOk returns a tuple with the AlertIds field value
 // and a boolean to check if the value has been set.
-func (o *MoveAlertsRequestBody) GetAlertIdsOk() ([]Ksuid, bool) {
+func (o *MoveAlertsRequestBody) GetAlertIdsOk() ([]string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -69,7 +69,7 @@ func (o *MoveAlertsRequestBody) GetAlertIdsOk() ([]Ksuid, bool) {
 }
 
 // SetAlertIds sets field value
-func (o *MoveAlertsRequestBody) SetAlertIds(v []Ksuid) {
+func (o *MoveAlertsRequestBody) SetAlertIds(v []string) {
 	o.AlertIds = v
 }
 

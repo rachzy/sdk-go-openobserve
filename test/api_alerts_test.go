@@ -56,7 +56,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 		t.Skip("skip test") // remove to run test
 
 		var orgId string
-		var alertId Ksuid
+		var alertId string
 
 		resp, httpRes, err := apiClient.AlertsAPI.DeleteAlert(context.Background(), orgId, alertId).Execute()
 
@@ -102,7 +102,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 		t.Skip("skip test") // remove to run test
 
 		var orgId string
-		var alertId Ksuid
+		var alertId string
 
 		resp, httpRes, err := apiClient.AlertsAPI.EnableAlert(context.Background(), orgId, alertId).Execute()
 
@@ -133,7 +133,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 		t.Skip("skip test") // remove to run test
 
 		var orgId string
-		var alertId Ksuid
+		var alertId string
 
 		resp, httpRes, err := apiClient.AlertsAPI.GetAlert(context.Background(), orgId, alertId).Execute()
 
@@ -265,7 +265,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 		t.Skip("skip test") // remove to run test
 
 		var orgId string
-		var alertId Ksuid
+		var alertId string
 
 		resp, httpRes, err := apiClient.AlertsAPI.TriggerAlert(context.Background(), orgId, alertId).Execute()
 
@@ -296,7 +296,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 		t.Skip("skip test") // remove to run test
 
 		var orgId string
-		var alertId Ksuid
+		var alertId string
 
 		resp, httpRes, err := apiClient.AlertsAPI.UpdateAlert(context.Background(), orgId, alertId).Execute()
 

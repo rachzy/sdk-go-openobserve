@@ -24,7 +24,7 @@ type Destination struct {
 	// Required when `destination_type` is `Email`
 	Emails []string `json:"emails,omitempty"`
 	Headers map[string]string `json:"headers,omitempty"`
-	Method *MetaDestHTTPType `json:"method,omitempty"`
+	Method *HTTPType `json:"method,omitempty"`
 	Name *string `json:"name,omitempty"`
 	SkipTlsVerify *bool `json:"skip_tls_verify,omitempty"`
 	SnsTopicArn NullableString `json:"sns_topic_arn,omitempty"`
@@ -159,9 +159,9 @@ func (o *Destination) SetHeaders(v map[string]string) {
 }
 
 // GetMethod returns the Method field value if set, zero value otherwise.
-func (o *Destination) GetMethod() MetaDestHTTPType {
+func (o *Destination) GetMethod() HTTPType {
 	if o == nil || IsNil(o.Method) {
-		var ret MetaDestHTTPType
+		var ret HTTPType
 		return ret
 	}
 	return *o.Method
@@ -169,7 +169,7 @@ func (o *Destination) GetMethod() MetaDestHTTPType {
 
 // GetMethodOk returns a tuple with the Method field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Destination) GetMethodOk() (*MetaDestHTTPType, bool) {
+func (o *Destination) GetMethodOk() (*HTTPType, bool) {
 	if o == nil || IsNil(o.Method) {
 		return nil, false
 	}
@@ -185,8 +185,8 @@ func (o *Destination) HasMethod() bool {
 	return false
 }
 
-// SetMethod gets a reference to the given MetaDestHTTPType and assigns it to the Method field.
-func (o *Destination) SetMethod(v MetaDestHTTPType) {
+// SetMethod gets a reference to the given HTTPType and assigns it to the Method field.
+func (o *Destination) SetMethod(v HTTPType) {
 	o.Method = &v
 }
 

@@ -302,7 +302,7 @@ type ApiDeleteAlertRequest struct {
 	ctx context.Context
 	ApiService *AlertsAPIService
 	orgId string
-	alertId Ksuid
+	alertId string
 }
 
 func (r ApiDeleteAlertRequest) Execute() (*HttpResponse, *http.Response, error) {
@@ -317,7 +317,7 @@ DeleteAlert DeleteAlert
  @param alertId Alert ID
  @return ApiDeleteAlertRequest
 */
-func (a *AlertsAPIService) DeleteAlert(ctx context.Context, orgId string, alertId Ksuid) ApiDeleteAlertRequest {
+func (a *AlertsAPIService) DeleteAlert(ctx context.Context, orgId string, alertId string) ApiDeleteAlertRequest {
 	return ApiDeleteAlertRequest{
 		ApiService: a,
 		ctx: ctx,
@@ -729,7 +729,7 @@ type ApiEnableAlertRequest struct {
 	ctx context.Context
 	ApiService *AlertsAPIService
 	orgId string
-	alertId Ksuid
+	alertId string
 	value *bool
 }
 
@@ -751,7 +751,7 @@ EnableAlert EnableAlert
  @param alertId Alert ID
  @return ApiEnableAlertRequest
 */
-func (a *AlertsAPIService) EnableAlert(ctx context.Context, orgId string, alertId Ksuid) ApiEnableAlertRequest {
+func (a *AlertsAPIService) EnableAlert(ctx context.Context, orgId string, alertId string) ApiEnableAlertRequest {
 	return ApiEnableAlertRequest{
 		ApiService: a,
 		ctx: ctx,
@@ -1038,7 +1038,7 @@ type ApiGetAlertRequest struct {
 	ctx context.Context
 	ApiService *AlertsAPIService
 	orgId string
-	alertId Ksuid
+	alertId string
 }
 
 func (r ApiGetAlertRequest) Execute() (*Alert, *http.Response, error) {
@@ -1053,7 +1053,7 @@ GetAlert GetAlert
  @param alertId Alert ID
  @return ApiGetAlertRequest
 */
-func (a *AlertsAPIService) GetAlert(ctx context.Context, orgId string, alertId Ksuid) ApiGetAlertRequest {
+func (a *AlertsAPIService) GetAlert(ctx context.Context, orgId string, alertId string) ApiGetAlertRequest {
 	return ApiGetAlertRequest{
 		ApiService: a,
 		ctx: ctx,
@@ -2304,7 +2304,7 @@ type ApiTriggerAlertRequest struct {
 	ctx context.Context
 	ApiService *AlertsAPIService
 	orgId string
-	alertId Ksuid
+	alertId string
 }
 
 func (r ApiTriggerAlertRequest) Execute() (*HttpResponse, *http.Response, error) {
@@ -2319,7 +2319,7 @@ TriggerAlert TriggerAlert
  @param alertId Alert ID
  @return ApiTriggerAlertRequest
 */
-func (a *AlertsAPIService) TriggerAlert(ctx context.Context, orgId string, alertId Ksuid) ApiTriggerAlertRequest {
+func (a *AlertsAPIService) TriggerAlert(ctx context.Context, orgId string, alertId string) ApiTriggerAlertRequest {
 	return ApiTriggerAlertRequest{
 		ApiService: a,
 		ctx: ctx,
@@ -2591,7 +2591,7 @@ type ApiUpdateAlertRequest struct {
 	ctx context.Context
 	ApiService *AlertsAPIService
 	orgId string
-	alertId Ksuid
+	alertId string
 	body *Alert
 }
 
@@ -2613,7 +2613,7 @@ UpdateAlert UpdateAlert
  @param alertId Alert ID
  @return ApiUpdateAlertRequest
 */
-func (a *AlertsAPIService) UpdateAlert(ctx context.Context, orgId string, alertId Ksuid) ApiUpdateAlertRequest {
+func (a *AlertsAPIService) UpdateAlert(ctx context.Context, orgId string, alertId string) ApiUpdateAlertRequest {
 	return ApiUpdateAlertRequest{
 		ApiService: a,
 		ctx: ctx,

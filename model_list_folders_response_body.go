@@ -22,7 +22,7 @@ var _ MappedNullable = &ListFoldersResponseBody{}
 
 // ListFoldersResponseBody HTTP response body for `ListFolder` endpoint.
 type ListFoldersResponseBody struct {
-	List []Folder `json:"list"`
+	List []FolderType `json:"list"`
 }
 
 type _ListFoldersResponseBody ListFoldersResponseBody
@@ -31,7 +31,7 @@ type _ListFoldersResponseBody ListFoldersResponseBody
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewListFoldersResponseBody(list []Folder) *ListFoldersResponseBody {
+func NewListFoldersResponseBody(list []FolderType) *ListFoldersResponseBody {
 	this := ListFoldersResponseBody{}
 	this.List = list
 	return &this
@@ -46,9 +46,9 @@ func NewListFoldersResponseBodyWithDefaults() *ListFoldersResponseBody {
 }
 
 // GetList returns the List field value
-func (o *ListFoldersResponseBody) GetList() []Folder {
+func (o *ListFoldersResponseBody) GetList() []FolderType {
 	if o == nil {
-		var ret []Folder
+		var ret []FolderType
 		return ret
 	}
 
@@ -57,7 +57,7 @@ func (o *ListFoldersResponseBody) GetList() []Folder {
 
 // GetListOk returns a tuple with the List field value
 // and a boolean to check if the value has been set.
-func (o *ListFoldersResponseBody) GetListOk() ([]Folder, bool) {
+func (o *ListFoldersResponseBody) GetListOk() ([]FolderType, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -65,7 +65,7 @@ func (o *ListFoldersResponseBody) GetListOk() ([]Folder, bool) {
 }
 
 // SetList sets field value
-func (o *ListFoldersResponseBody) SetList(v []Folder) {
+func (o *ListFoldersResponseBody) SetList(v []FolderType) {
 	o.List = v
 }
 

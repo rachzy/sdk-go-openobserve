@@ -2,24 +2,24 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**AlertId** | [**Ksuid**](Ksuid.md) |  | 
-**Condition** | [**QueryCondition**](QueryCondition.md) |  | 
-**Description** | Pointer to **NullableString** |  | [optional] 
-**Enabled** | **bool** |  | 
-**FolderId** | **string** |  | 
-**FolderName** | **string** |  | 
-**LastSatisfiedAt** | Pointer to **NullableInt64** |  | [optional] 
-**LastTriggeredAt** | Pointer to **NullableInt64** |  | [optional] 
-**Name** | **string** |  | 
-**Owner** | Pointer to **NullableString** |  | [optional] 
+| Name                | Type                                    | Description | Notes      |
+| ------------------- | --------------------------------------- | ----------- | ---------- |
+| **AlertId**         | [**string**](string.md)                 |             |
+| **Condition**       | [**QueryCondition**](QueryCondition.md) |             |
+| **Description**     | Pointer to **NullableString**           |             | [optional] |
+| **Enabled**         | **bool**                                |             |
+| **FolderId**        | **string**                              |             |
+| **FolderName**      | **string**                              |             |
+| **LastSatisfiedAt** | Pointer to **NullableInt64**            |             | [optional] |
+| **LastTriggeredAt** | Pointer to **NullableInt64**            |             | [optional] |
+| **Name**            | **string**                              |             |
+| **Owner**           | Pointer to **NullableString**           |             | [optional] |
 
 ## Methods
 
 ### NewListAlertsResponseBodyItem
 
-`func NewListAlertsResponseBodyItem(alertId Ksuid, condition QueryCondition, enabled bool, folderId string, folderName string, name string, ) *ListAlertsResponseBodyItem`
+`func NewListAlertsResponseBodyItem(alertId string, condition QueryCondition, enabled bool, folderId string, folderName string, name string, ) *ListAlertsResponseBodyItem`
 
 NewListAlertsResponseBodyItem instantiates a new ListAlertsResponseBodyItem object
 This constructor will assign default values to properties that have it defined,
@@ -36,23 +36,22 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetAlertId
 
-`func (o *ListAlertsResponseBodyItem) GetAlertId() Ksuid`
+`func (o *ListAlertsResponseBodyItem) GetAlertId() string`
 
 GetAlertId returns the AlertId field if non-nil, zero value otherwise.
 
 ### GetAlertIdOk
 
-`func (o *ListAlertsResponseBodyItem) GetAlertIdOk() (*Ksuid, bool)`
+`func (o *ListAlertsResponseBodyItem) GetAlertIdOk() (*string, bool)`
 
 GetAlertIdOk returns a tuple with the AlertId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAlertId
 
-`func (o *ListAlertsResponseBodyItem) SetAlertId(v Ksuid)`
+`func (o *ListAlertsResponseBodyItem) SetAlertId(v string)`
 
 SetAlertId sets AlertId field to given value.
-
 
 ### GetCondition
 
@@ -72,7 +71,6 @@ and a boolean to check if the value has been set.
 `func (o *ListAlertsResponseBodyItem) SetCondition(v QueryCondition)`
 
 SetCondition sets Condition field to given value.
-
 
 ### GetDescription
 
@@ -103,12 +101,14 @@ HasDescription returns a boolean if a field has been set.
 
 `func (o *ListAlertsResponseBodyItem) SetDescriptionNil(b bool)`
 
- SetDescriptionNil sets the value for Description to be an explicit nil
+SetDescriptionNil sets the value for Description to be an explicit nil
 
 ### UnsetDescription
+
 `func (o *ListAlertsResponseBodyItem) UnsetDescription()`
 
 UnsetDescription ensures that no value is present for Description, not even an explicit nil
+
 ### GetEnabled
 
 `func (o *ListAlertsResponseBodyItem) GetEnabled() bool`
@@ -127,7 +127,6 @@ and a boolean to check if the value has been set.
 `func (o *ListAlertsResponseBodyItem) SetEnabled(v bool)`
 
 SetEnabled sets Enabled field to given value.
-
 
 ### GetFolderId
 
@@ -148,7 +147,6 @@ and a boolean to check if the value has been set.
 
 SetFolderId sets FolderId field to given value.
 
-
 ### GetFolderName
 
 `func (o *ListAlertsResponseBodyItem) GetFolderName() string`
@@ -167,7 +165,6 @@ and a boolean to check if the value has been set.
 `func (o *ListAlertsResponseBodyItem) SetFolderName(v string)`
 
 SetFolderName sets FolderName field to given value.
-
 
 ### GetLastSatisfiedAt
 
@@ -198,12 +195,14 @@ HasLastSatisfiedAt returns a boolean if a field has been set.
 
 `func (o *ListAlertsResponseBodyItem) SetLastSatisfiedAtNil(b bool)`
 
- SetLastSatisfiedAtNil sets the value for LastSatisfiedAt to be an explicit nil
+SetLastSatisfiedAtNil sets the value for LastSatisfiedAt to be an explicit nil
 
 ### UnsetLastSatisfiedAt
+
 `func (o *ListAlertsResponseBodyItem) UnsetLastSatisfiedAt()`
 
 UnsetLastSatisfiedAt ensures that no value is present for LastSatisfiedAt, not even an explicit nil
+
 ### GetLastTriggeredAt
 
 `func (o *ListAlertsResponseBodyItem) GetLastTriggeredAt() int64`
@@ -233,12 +232,14 @@ HasLastTriggeredAt returns a boolean if a field has been set.
 
 `func (o *ListAlertsResponseBodyItem) SetLastTriggeredAtNil(b bool)`
 
- SetLastTriggeredAtNil sets the value for LastTriggeredAt to be an explicit nil
+SetLastTriggeredAtNil sets the value for LastTriggeredAt to be an explicit nil
 
 ### UnsetLastTriggeredAt
+
 `func (o *ListAlertsResponseBodyItem) UnsetLastTriggeredAt()`
 
 UnsetLastTriggeredAt ensures that no value is present for LastTriggeredAt, not even an explicit nil
+
 ### GetName
 
 `func (o *ListAlertsResponseBodyItem) GetName() string`
@@ -257,7 +258,6 @@ and a boolean to check if the value has been set.
 `func (o *ListAlertsResponseBodyItem) SetName(v string)`
 
 SetName sets Name field to given value.
-
 
 ### GetOwner
 
@@ -288,13 +288,12 @@ HasOwner returns a boolean if a field has been set.
 
 `func (o *ListAlertsResponseBodyItem) SetOwnerNil(b bool)`
 
- SetOwnerNil sets the value for Owner to be an explicit nil
+SetOwnerNil sets the value for Owner to be an explicit nil
 
 ### UnsetOwner
+
 `func (o *ListAlertsResponseBodyItem) UnsetOwner()`
 
 UnsetOwner ensures that no value is present for Owner, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

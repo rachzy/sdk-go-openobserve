@@ -22,7 +22,7 @@ var _ MappedNullable = &ListAlertsResponseBodyItem{}
 
 // ListAlertsResponseBodyItem An item in the list returned by the `ListDashboards` endpoint.
 type ListAlertsResponseBodyItem struct {
-	AlertId Ksuid `json:"alert_id"`
+	AlertId string `json:"alert_id"`
 	Condition QueryCondition `json:"condition"`
 	Description NullableString `json:"description,omitempty"`
 	Enabled bool `json:"enabled"`
@@ -40,7 +40,7 @@ type _ListAlertsResponseBodyItem ListAlertsResponseBodyItem
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewListAlertsResponseBodyItem(alertId Ksuid, condition QueryCondition, enabled bool, folderId string, folderName string, name string) *ListAlertsResponseBodyItem {
+func NewListAlertsResponseBodyItem(alertId string, condition QueryCondition, enabled bool, folderId string, folderName string, name string) *ListAlertsResponseBodyItem {
 	this := ListAlertsResponseBodyItem{}
 	this.AlertId = alertId
 	this.Condition = condition
@@ -60,9 +60,9 @@ func NewListAlertsResponseBodyItemWithDefaults() *ListAlertsResponseBodyItem {
 }
 
 // GetAlertId returns the AlertId field value
-func (o *ListAlertsResponseBodyItem) GetAlertId() Ksuid {
+func (o *ListAlertsResponseBodyItem) GetAlertId() string {
 	if o == nil {
-		var ret Ksuid
+		var ret string
 		return ret
 	}
 
@@ -71,7 +71,7 @@ func (o *ListAlertsResponseBodyItem) GetAlertId() Ksuid {
 
 // GetAlertIdOk returns a tuple with the AlertId field value
 // and a boolean to check if the value has been set.
-func (o *ListAlertsResponseBodyItem) GetAlertIdOk() (*Ksuid, bool) {
+func (o *ListAlertsResponseBodyItem) GetAlertIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -79,7 +79,7 @@ func (o *ListAlertsResponseBodyItem) GetAlertIdOk() (*Ksuid, bool) {
 }
 
 // SetAlertId sets field value
-func (o *ListAlertsResponseBodyItem) SetAlertId(v Ksuid) {
+func (o *ListAlertsResponseBodyItem) SetAlertId(v string) {
 	o.AlertId = v
 }
 

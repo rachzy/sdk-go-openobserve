@@ -33,11 +33,11 @@ type ListDashboardsResponseBodyItem struct {
 	Role string `json:"role"`
 	Title string `json:"title"`
 	UpdatedAt int64 `json:"updatedAt"`
-	V1 NullableV1Dashboard `json:"v1,omitempty"`
-	V2 NullableV2Dashboard `json:"v2,omitempty"`
-	V3 NullableV3Dashboard `json:"v3,omitempty"`
-	V4 NullableV4Dashboard `json:"v4,omitempty"`
-	V5 NullableV5Dashboard `json:"v5,omitempty"`
+	V1 NullableString `json:"v1,omitempty"`
+	V2 NullableString `json:"v2,omitempty"`
+	V3 NullableString `json:"v3,omitempty"`
+	V4 NullableString `json:"v4,omitempty"`
+	V5 NullableString `json:"v5,omitempty"`
 	Version int32 `json:"version"`
 }
 
@@ -312,9 +312,9 @@ func (o *ListDashboardsResponseBodyItem) SetUpdatedAt(v int64) {
 }
 
 // GetV1 returns the V1 field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *ListDashboardsResponseBodyItem) GetV1() V1Dashboard {
+func (o *ListDashboardsResponseBodyItem) GetV1() string {
 	if o == nil || IsNil(o.V1.Get()) {
-		var ret V1Dashboard
+		var ret string
 		return ret
 	}
 	return *o.V1.Get()
@@ -323,7 +323,7 @@ func (o *ListDashboardsResponseBodyItem) GetV1() V1Dashboard {
 // GetV1Ok returns a tuple with the V1 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *ListDashboardsResponseBodyItem) GetV1Ok() (*V1Dashboard, bool) {
+func (o *ListDashboardsResponseBodyItem) GetV1Ok() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -339,8 +339,8 @@ func (o *ListDashboardsResponseBodyItem) HasV1() bool {
 	return false
 }
 
-// SetV1 gets a reference to the given NullableV1Dashboard and assigns it to the V1 field.
-func (o *ListDashboardsResponseBodyItem) SetV1(v V1Dashboard) {
+// SetV1 gets a reference to the given Nullablestring and assigns it to the V1 field.
+func (o *ListDashboardsResponseBodyItem) SetV1(v string) {
 	o.V1.Set(&v)
 }
 // SetV1Nil sets the value for V1 to be an explicit nil
@@ -354,9 +354,9 @@ func (o *ListDashboardsResponseBodyItem) UnsetV1() {
 }
 
 // GetV2 returns the V2 field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *ListDashboardsResponseBodyItem) GetV2() V2Dashboard {
+func (o *ListDashboardsResponseBodyItem) GetV2() string {
 	if o == nil || IsNil(o.V2.Get()) {
-		var ret V2Dashboard
+		var ret string
 		return ret
 	}
 	return *o.V2.Get()
@@ -365,7 +365,7 @@ func (o *ListDashboardsResponseBodyItem) GetV2() V2Dashboard {
 // GetV2Ok returns a tuple with the V2 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *ListDashboardsResponseBodyItem) GetV2Ok() (*V2Dashboard, bool) {
+func (o *ListDashboardsResponseBodyItem) GetV2Ok() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -381,8 +381,8 @@ func (o *ListDashboardsResponseBodyItem) HasV2() bool {
 	return false
 }
 
-// SetV2 gets a reference to the given NullableV2Dashboard and assigns it to the V2 field.
-func (o *ListDashboardsResponseBodyItem) SetV2(v V2Dashboard) {
+// SetV2 gets a reference to the given NullableString and assigns it to the V2 field.
+func (o *ListDashboardsResponseBodyItem) SetV2(v string) {
 	o.V2.Set(&v)
 }
 // SetV2Nil sets the value for V2 to be an explicit nil
@@ -396,9 +396,9 @@ func (o *ListDashboardsResponseBodyItem) UnsetV2() {
 }
 
 // GetV3 returns the V3 field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *ListDashboardsResponseBodyItem) GetV3() V3Dashboard {
+func (o *ListDashboardsResponseBodyItem) GetV3() string {
 	if o == nil || IsNil(o.V3.Get()) {
-		var ret V3Dashboard
+		var ret string
 		return ret
 	}
 	return *o.V3.Get()
@@ -407,7 +407,7 @@ func (o *ListDashboardsResponseBodyItem) GetV3() V3Dashboard {
 // GetV3Ok returns a tuple with the V3 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *ListDashboardsResponseBodyItem) GetV3Ok() (*V3Dashboard, bool) {
+func (o *ListDashboardsResponseBodyItem) GetV3Ok() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -423,8 +423,8 @@ func (o *ListDashboardsResponseBodyItem) HasV3() bool {
 	return false
 }
 
-// SetV3 gets a reference to the given NullableV3Dashboard and assigns it to the V3 field.
-func (o *ListDashboardsResponseBodyItem) SetV3(v V3Dashboard) {
+// SetV3 gets a reference to the given NullableString and assigns it to the V3 field.
+func (o *ListDashboardsResponseBodyItem) SetV3(v string) {
 	o.V3.Set(&v)
 }
 // SetV3Nil sets the value for V3 to be an explicit nil
@@ -438,9 +438,9 @@ func (o *ListDashboardsResponseBodyItem) UnsetV3() {
 }
 
 // GetV4 returns the V4 field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *ListDashboardsResponseBodyItem) GetV4() V4Dashboard {
+func (o *ListDashboardsResponseBodyItem) GetV4() string {
 	if o == nil || IsNil(o.V4.Get()) {
-		var ret V4Dashboard
+		var ret string
 		return ret
 	}
 	return *o.V4.Get()
@@ -449,7 +449,7 @@ func (o *ListDashboardsResponseBodyItem) GetV4() V4Dashboard {
 // GetV4Ok returns a tuple with the V4 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *ListDashboardsResponseBodyItem) GetV4Ok() (*V4Dashboard, bool) {
+func (o *ListDashboardsResponseBodyItem) GetV4Ok() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -465,8 +465,8 @@ func (o *ListDashboardsResponseBodyItem) HasV4() bool {
 	return false
 }
 
-// SetV4 gets a reference to the given NullableV4Dashboard and assigns it to the V4 field.
-func (o *ListDashboardsResponseBodyItem) SetV4(v V4Dashboard) {
+// SetV4 gets a reference to the given NullableString and assigns it to the V4 field.
+func (o *ListDashboardsResponseBodyItem) SetV4(v string) {
 	o.V4.Set(&v)
 }
 // SetV4Nil sets the value for V4 to be an explicit nil
@@ -480,9 +480,9 @@ func (o *ListDashboardsResponseBodyItem) UnsetV4() {
 }
 
 // GetV5 returns the V5 field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *ListDashboardsResponseBodyItem) GetV5() V5Dashboard {
+func (o *ListDashboardsResponseBodyItem) GetV5() string {
 	if o == nil || IsNil(o.V5.Get()) {
-		var ret V5Dashboard
+		var ret string
 		return ret
 	}
 	return *o.V5.Get()
@@ -491,7 +491,7 @@ func (o *ListDashboardsResponseBodyItem) GetV5() V5Dashboard {
 // GetV5Ok returns a tuple with the V5 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *ListDashboardsResponseBodyItem) GetV5Ok() (*V5Dashboard, bool) {
+func (o *ListDashboardsResponseBodyItem) GetV5Ok() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -507,8 +507,8 @@ func (o *ListDashboardsResponseBodyItem) HasV5() bool {
 	return false
 }
 
-// SetV5 gets a reference to the given NullableV5Dashboard and assigns it to the V5 field.
-func (o *ListDashboardsResponseBodyItem) SetV5(v V5Dashboard) {
+// SetV5 gets a reference to the given NullableString and assigns it to the V5 field.
+func (o *ListDashboardsResponseBodyItem) SetV5(v string) {
 	o.V5.Set(&v)
 }
 // SetV5Nil sets the value for V5 to be an explicit nil

@@ -24,8 +24,8 @@ type StreamSettings struct {
 	BloomFilterFields []string `json:"bloom_filter_fields,omitempty"`
 	DataRetention *int64 `json:"data_retention,omitempty"`
 	DefinedSchemaFields []string `json:"defined_schema_fields,omitempty"`
-	DistinctValueFields []DistinctField `json:"distinct_value_fields,omitempty"`
-	ExtendedRetentionDays []TimeRange `json:"extended_retention_days,omitempty"`
+	DistinctValueFields []CustomFieldsOption `json:"distinct_value_fields,omitempty"`
+	ExtendedRetentionDays []any `json:"extended_retention_days,omitempty"`
 	FlattenLevel NullableInt64 `json:"flatten_level,omitempty"`
 	FullTextSearchKeys []string `json:"full_text_search_keys,omitempty"`
 	IndexFields []string `json:"index_fields,omitempty"`
@@ -183,9 +183,9 @@ func (o *StreamSettings) SetDefinedSchemaFields(v []string) {
 }
 
 // GetDistinctValueFields returns the DistinctValueFields field value if set, zero value otherwise.
-func (o *StreamSettings) GetDistinctValueFields() []DistinctField {
+func (o *StreamSettings) GetDistinctValueFields() []CustomFieldsOption {
 	if o == nil || IsNil(o.DistinctValueFields) {
-		var ret []DistinctField
+		var ret []CustomFieldsOption
 		return ret
 	}
 	return o.DistinctValueFields
@@ -193,7 +193,7 @@ func (o *StreamSettings) GetDistinctValueFields() []DistinctField {
 
 // GetDistinctValueFieldsOk returns a tuple with the DistinctValueFields field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *StreamSettings) GetDistinctValueFieldsOk() ([]DistinctField, bool) {
+func (o *StreamSettings) GetDistinctValueFieldsOk() ([]CustomFieldsOption, bool) {
 	if o == nil || IsNil(o.DistinctValueFields) {
 		return nil, false
 	}
@@ -209,15 +209,15 @@ func (o *StreamSettings) HasDistinctValueFields() bool {
 	return false
 }
 
-// SetDistinctValueFields gets a reference to the given []DistinctField and assigns it to the DistinctValueFields field.
-func (o *StreamSettings) SetDistinctValueFields(v []DistinctField) {
+// SetDistinctValueFields gets a reference to the given []CustomFieldsOption and assigns it to the DistinctValueFields field.
+func (o *StreamSettings) SetDistinctValueFields(v []CustomFieldsOption) {
 	o.DistinctValueFields = v
 }
 
 // GetExtendedRetentionDays returns the ExtendedRetentionDays field value if set, zero value otherwise.
-func (o *StreamSettings) GetExtendedRetentionDays() []TimeRange {
+func (o *StreamSettings) GetExtendedRetentionDays() []any {
 	if o == nil || IsNil(o.ExtendedRetentionDays) {
-		var ret []TimeRange
+		var ret []any
 		return ret
 	}
 	return o.ExtendedRetentionDays
@@ -225,7 +225,7 @@ func (o *StreamSettings) GetExtendedRetentionDays() []TimeRange {
 
 // GetExtendedRetentionDaysOk returns a tuple with the ExtendedRetentionDays field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *StreamSettings) GetExtendedRetentionDaysOk() ([]TimeRange, bool) {
+func (o *StreamSettings) GetExtendedRetentionDaysOk() ([]any, bool) {
 	if o == nil || IsNil(o.ExtendedRetentionDays) {
 		return nil, false
 	}
@@ -241,8 +241,8 @@ func (o *StreamSettings) HasExtendedRetentionDays() bool {
 	return false
 }
 
-// SetExtendedRetentionDays gets a reference to the given []TimeRange and assigns it to the ExtendedRetentionDays field.
-func (o *StreamSettings) SetExtendedRetentionDays(v []TimeRange) {
+// SetExtendedRetentionDays gets a reference to the given []any and assigns it to the ExtendedRetentionDays field.
+func (o *StreamSettings) SetExtendedRetentionDays(v []any) {
 	o.ExtendedRetentionDays = v
 }
 

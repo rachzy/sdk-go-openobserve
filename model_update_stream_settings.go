@@ -21,16 +21,16 @@ var _ MappedNullable = &UpdateStreamSettings{}
 // UpdateStreamSettings struct for UpdateStreamSettings
 type UpdateStreamSettings struct {
 	ApproxPartition NullableBool `json:"approx_partition,omitempty"`
-	BloomFilterFields *UpdateSettingsWrapper `json:"bloom_filter_fields,omitempty"`
+	BloomFilterFields *UpdateStreamSettings `json:"bloom_filter_fields,omitempty"`
 	DataRetention NullableInt64 `json:"data_retention,omitempty"`
-	DefinedSchemaFields *UpdateSettingsWrapper `json:"defined_schema_fields,omitempty"`
-	DistinctValueFields *UpdateSettingsWrapper `json:"distinct_value_fields,omitempty"`
-	ExtendedRetentionDays *UpdateSettingsWrapper `json:"extended_retention_days,omitempty"`
+	DefinedSchemaFields *UpdateStreamSettings `json:"defined_schema_fields,omitempty"`
+	DistinctValueFields *UpdateStreamSettings `json:"distinct_value_fields,omitempty"`
+	ExtendedRetentionDays *UpdateStreamSettings `json:"extended_retention_days,omitempty"`
 	FlattenLevel NullableInt64 `json:"flatten_level,omitempty"`
-	FullTextSearchKeys *UpdateSettingsWrapper `json:"full_text_search_keys,omitempty"`
-	IndexFields *UpdateSettingsWrapper `json:"index_fields,omitempty"`
+	FullTextSearchKeys *UpdateStreamSettings `json:"full_text_search_keys,omitempty"`
+	IndexFields *UpdateStreamSettings `json:"index_fields,omitempty"`
 	MaxQueryRange NullableInt64 `json:"max_query_range,omitempty"`
-	PartitionKeys *UpdateSettingsWrapper `json:"partition_keys,omitempty"`
+	PartitionKeys *UpdateStreamSettings `json:"partition_keys,omitempty"`
 	PartitionTimeLevel NullablePartitionTimeLevel `json:"partition_time_level,omitempty"`
 	StoreOriginalData NullableBool `json:"store_original_data,omitempty"`
 }
@@ -95,9 +95,9 @@ func (o *UpdateStreamSettings) UnsetApproxPartition() {
 }
 
 // GetBloomFilterFields returns the BloomFilterFields field value if set, zero value otherwise.
-func (o *UpdateStreamSettings) GetBloomFilterFields() UpdateSettingsWrapper {
+func (o *UpdateStreamSettings) GetBloomFilterFields() UpdateStreamSettings {
 	if o == nil || IsNil(o.BloomFilterFields) {
-		var ret UpdateSettingsWrapper
+		var ret UpdateStreamSettings
 		return ret
 	}
 	return *o.BloomFilterFields
@@ -105,7 +105,7 @@ func (o *UpdateStreamSettings) GetBloomFilterFields() UpdateSettingsWrapper {
 
 // GetBloomFilterFieldsOk returns a tuple with the BloomFilterFields field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *UpdateStreamSettings) GetBloomFilterFieldsOk() (*UpdateSettingsWrapper, bool) {
+func (o *UpdateStreamSettings) GetBloomFilterFieldsOk() (*UpdateStreamSettings, bool) {
 	if o == nil || IsNil(o.BloomFilterFields) {
 		return nil, false
 	}
@@ -121,8 +121,8 @@ func (o *UpdateStreamSettings) HasBloomFilterFields() bool {
 	return false
 }
 
-// SetBloomFilterFields gets a reference to the given UpdateSettingsWrapper and assigns it to the BloomFilterFields field.
-func (o *UpdateStreamSettings) SetBloomFilterFields(v UpdateSettingsWrapper) {
+// SetBloomFilterFields gets a reference to the given UpdateStreamSettings and assigns it to the BloomFilterFields field.
+func (o *UpdateStreamSettings) SetBloomFilterFields(v UpdateStreamSettings) {
 	o.BloomFilterFields = &v
 }
 
@@ -169,9 +169,9 @@ func (o *UpdateStreamSettings) UnsetDataRetention() {
 }
 
 // GetDefinedSchemaFields returns the DefinedSchemaFields field value if set, zero value otherwise.
-func (o *UpdateStreamSettings) GetDefinedSchemaFields() UpdateSettingsWrapper {
+func (o *UpdateStreamSettings) GetDefinedSchemaFields() UpdateStreamSettings {
 	if o == nil || IsNil(o.DefinedSchemaFields) {
-		var ret UpdateSettingsWrapper
+		var ret UpdateStreamSettings
 		return ret
 	}
 	return *o.DefinedSchemaFields
@@ -179,7 +179,7 @@ func (o *UpdateStreamSettings) GetDefinedSchemaFields() UpdateSettingsWrapper {
 
 // GetDefinedSchemaFieldsOk returns a tuple with the DefinedSchemaFields field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *UpdateStreamSettings) GetDefinedSchemaFieldsOk() (*UpdateSettingsWrapper, bool) {
+func (o *UpdateStreamSettings) GetDefinedSchemaFieldsOk() (*UpdateStreamSettings, bool) {
 	if o == nil || IsNil(o.DefinedSchemaFields) {
 		return nil, false
 	}
@@ -195,15 +195,15 @@ func (o *UpdateStreamSettings) HasDefinedSchemaFields() bool {
 	return false
 }
 
-// SetDefinedSchemaFields gets a reference to the given UpdateSettingsWrapper and assigns it to the DefinedSchemaFields field.
-func (o *UpdateStreamSettings) SetDefinedSchemaFields(v UpdateSettingsWrapper) {
+// SetDefinedSchemaFields gets a reference to the given UpdateStreamSettings and assigns it to the DefinedSchemaFields field.
+func (o *UpdateStreamSettings) SetDefinedSchemaFields(v UpdateStreamSettings) {
 	o.DefinedSchemaFields = &v
 }
 
 // GetDistinctValueFields returns the DistinctValueFields field value if set, zero value otherwise.
-func (o *UpdateStreamSettings) GetDistinctValueFields() UpdateSettingsWrapper {
+func (o *UpdateStreamSettings) GetDistinctValueFields() UpdateStreamSettings {
 	if o == nil || IsNil(o.DistinctValueFields) {
-		var ret UpdateSettingsWrapper
+		var ret UpdateStreamSettings
 		return ret
 	}
 	return *o.DistinctValueFields
@@ -211,7 +211,7 @@ func (o *UpdateStreamSettings) GetDistinctValueFields() UpdateSettingsWrapper {
 
 // GetDistinctValueFieldsOk returns a tuple with the DistinctValueFields field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *UpdateStreamSettings) GetDistinctValueFieldsOk() (*UpdateSettingsWrapper, bool) {
+func (o *UpdateStreamSettings) GetDistinctValueFieldsOk() (*UpdateStreamSettings, bool) {
 	if o == nil || IsNil(o.DistinctValueFields) {
 		return nil, false
 	}
@@ -227,15 +227,15 @@ func (o *UpdateStreamSettings) HasDistinctValueFields() bool {
 	return false
 }
 
-// SetDistinctValueFields gets a reference to the given UpdateSettingsWrapper and assigns it to the DistinctValueFields field.
-func (o *UpdateStreamSettings) SetDistinctValueFields(v UpdateSettingsWrapper) {
+// SetDistinctValueFields gets a reference to the given UpdateStreamSettings and assigns it to the DistinctValueFields field.
+func (o *UpdateStreamSettings) SetDistinctValueFields(v UpdateStreamSettings) {
 	o.DistinctValueFields = &v
 }
 
 // GetExtendedRetentionDays returns the ExtendedRetentionDays field value if set, zero value otherwise.
-func (o *UpdateStreamSettings) GetExtendedRetentionDays() UpdateSettingsWrapper {
+func (o *UpdateStreamSettings) GetExtendedRetentionDays() UpdateStreamSettings {
 	if o == nil || IsNil(o.ExtendedRetentionDays) {
-		var ret UpdateSettingsWrapper
+		var ret UpdateStreamSettings
 		return ret
 	}
 	return *o.ExtendedRetentionDays
@@ -243,7 +243,7 @@ func (o *UpdateStreamSettings) GetExtendedRetentionDays() UpdateSettingsWrapper 
 
 // GetExtendedRetentionDaysOk returns a tuple with the ExtendedRetentionDays field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *UpdateStreamSettings) GetExtendedRetentionDaysOk() (*UpdateSettingsWrapper, bool) {
+func (o *UpdateStreamSettings) GetExtendedRetentionDaysOk() (*UpdateStreamSettings, bool) {
 	if o == nil || IsNil(o.ExtendedRetentionDays) {
 		return nil, false
 	}
@@ -259,8 +259,8 @@ func (o *UpdateStreamSettings) HasExtendedRetentionDays() bool {
 	return false
 }
 
-// SetExtendedRetentionDays gets a reference to the given UpdateSettingsWrapper and assigns it to the ExtendedRetentionDays field.
-func (o *UpdateStreamSettings) SetExtendedRetentionDays(v UpdateSettingsWrapper) {
+// SetExtendedRetentionDays gets a reference to the given UpdateStreamSettings and assigns it to the ExtendedRetentionDays field.
+func (o *UpdateStreamSettings) SetExtendedRetentionDays(v UpdateStreamSettings) {
 	o.ExtendedRetentionDays = &v
 }
 
@@ -307,9 +307,9 @@ func (o *UpdateStreamSettings) UnsetFlattenLevel() {
 }
 
 // GetFullTextSearchKeys returns the FullTextSearchKeys field value if set, zero value otherwise.
-func (o *UpdateStreamSettings) GetFullTextSearchKeys() UpdateSettingsWrapper {
+func (o *UpdateStreamSettings) GetFullTextSearchKeys() UpdateStreamSettings {
 	if o == nil || IsNil(o.FullTextSearchKeys) {
-		var ret UpdateSettingsWrapper
+		var ret UpdateStreamSettings
 		return ret
 	}
 	return *o.FullTextSearchKeys
@@ -317,7 +317,7 @@ func (o *UpdateStreamSettings) GetFullTextSearchKeys() UpdateSettingsWrapper {
 
 // GetFullTextSearchKeysOk returns a tuple with the FullTextSearchKeys field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *UpdateStreamSettings) GetFullTextSearchKeysOk() (*UpdateSettingsWrapper, bool) {
+func (o *UpdateStreamSettings) GetFullTextSearchKeysOk() (*UpdateStreamSettings, bool) {
 	if o == nil || IsNil(o.FullTextSearchKeys) {
 		return nil, false
 	}
@@ -333,15 +333,15 @@ func (o *UpdateStreamSettings) HasFullTextSearchKeys() bool {
 	return false
 }
 
-// SetFullTextSearchKeys gets a reference to the given UpdateSettingsWrapper and assigns it to the FullTextSearchKeys field.
-func (o *UpdateStreamSettings) SetFullTextSearchKeys(v UpdateSettingsWrapper) {
+// SetFullTextSearchKeys gets a reference to the given UpdateStreamSettings and assigns it to the FullTextSearchKeys field.
+func (o *UpdateStreamSettings) SetFullTextSearchKeys(v UpdateStreamSettings) {
 	o.FullTextSearchKeys = &v
 }
 
 // GetIndexFields returns the IndexFields field value if set, zero value otherwise.
-func (o *UpdateStreamSettings) GetIndexFields() UpdateSettingsWrapper {
+func (o *UpdateStreamSettings) GetIndexFields() UpdateStreamSettings {
 	if o == nil || IsNil(o.IndexFields) {
-		var ret UpdateSettingsWrapper
+		var ret UpdateStreamSettings
 		return ret
 	}
 	return *o.IndexFields
@@ -349,7 +349,7 @@ func (o *UpdateStreamSettings) GetIndexFields() UpdateSettingsWrapper {
 
 // GetIndexFieldsOk returns a tuple with the IndexFields field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *UpdateStreamSettings) GetIndexFieldsOk() (*UpdateSettingsWrapper, bool) {
+func (o *UpdateStreamSettings) GetIndexFieldsOk() (*UpdateStreamSettings, bool) {
 	if o == nil || IsNil(o.IndexFields) {
 		return nil, false
 	}
@@ -365,8 +365,8 @@ func (o *UpdateStreamSettings) HasIndexFields() bool {
 	return false
 }
 
-// SetIndexFields gets a reference to the given UpdateSettingsWrapper and assigns it to the IndexFields field.
-func (o *UpdateStreamSettings) SetIndexFields(v UpdateSettingsWrapper) {
+// SetIndexFields gets a reference to the given UpdateStreamSettings and assigns it to the IndexFields field.
+func (o *UpdateStreamSettings) SetIndexFields(v UpdateStreamSettings) {
 	o.IndexFields = &v
 }
 
@@ -413,9 +413,9 @@ func (o *UpdateStreamSettings) UnsetMaxQueryRange() {
 }
 
 // GetPartitionKeys returns the PartitionKeys field value if set, zero value otherwise.
-func (o *UpdateStreamSettings) GetPartitionKeys() UpdateSettingsWrapper {
+func (o *UpdateStreamSettings) GetPartitionKeys() UpdateStreamSettings {
 	if o == nil || IsNil(o.PartitionKeys) {
-		var ret UpdateSettingsWrapper
+		var ret UpdateStreamSettings
 		return ret
 	}
 	return *o.PartitionKeys
@@ -423,7 +423,7 @@ func (o *UpdateStreamSettings) GetPartitionKeys() UpdateSettingsWrapper {
 
 // GetPartitionKeysOk returns a tuple with the PartitionKeys field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *UpdateStreamSettings) GetPartitionKeysOk() (*UpdateSettingsWrapper, bool) {
+func (o *UpdateStreamSettings) GetPartitionKeysOk() (*UpdateStreamSettings, bool) {
 	if o == nil || IsNil(o.PartitionKeys) {
 		return nil, false
 	}
@@ -439,8 +439,8 @@ func (o *UpdateStreamSettings) HasPartitionKeys() bool {
 	return false
 }
 
-// SetPartitionKeys gets a reference to the given UpdateSettingsWrapper and assigns it to the PartitionKeys field.
-func (o *UpdateStreamSettings) SetPartitionKeys(v UpdateSettingsWrapper) {
+// SetPartitionKeys gets a reference to the given UpdateStreamSettings and assigns it to the PartitionKeys field.
+func (o *UpdateStreamSettings) SetPartitionKeys(v UpdateStreamSettings) {
 	o.PartitionKeys = &v
 }
 

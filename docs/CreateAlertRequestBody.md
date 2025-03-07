@@ -2,28 +2,28 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**ContextAttributes** | Pointer to **map[string]string** |  | [optional] 
-**Description** | Pointer to **string** |  | [optional] 
-**Destinations** | **[]string** |  | 
-**Enabled** | Pointer to **bool** |  | [optional] 
-**Id** | Pointer to [**NullableKsuid**](Ksuid.md) |  | [optional] 
-**IsRealTime** | Pointer to **bool** |  | [optional] 
-**LastEditedBy** | Pointer to **NullableString** |  | [optional] [readonly] 
-**LastSatisfiedAt** | Pointer to **NullableInt64** | Time when alert was last satisfied. Unix timestamp. | [optional] [readonly] 
-**LastTriggeredAt** | Pointer to **NullableInt64** | Time when alert was last triggered. Unix timestamp. | [optional] [readonly] 
-**Name** | Pointer to **string** |  | [optional] 
-**OrgId** | Pointer to **string** |  | [optional] 
-**Owner** | Pointer to **NullableString** |  | [optional] 
-**QueryCondition** | Pointer to [**QueryCondition**](QueryCondition.md) |  | [optional] 
-**RowTemplate** | Pointer to **string** |  | [optional] 
-**StreamName** | Pointer to **string** |  | [optional] 
-**StreamType** | Pointer to [**StreamType**](StreamType.md) |  | [optional] 
-**TriggerCondition** | Pointer to [**TriggerCondition**](TriggerCondition.md) |  | [optional] 
-**TzOffset** | Pointer to **int32** | Timezone offset in minutes. Negative seconds means the western hemisphere | [optional] 
-**UpdatedAt** | Pointer to **NullableInt64** | Time when alert was last updated. Unix timestamp. | [optional] [readonly] 
-**FolderId** | Pointer to **NullableString** | Optional folder ID indicating the folder in which to create the alert. If omitted the alert will be created in the default folder. | [optional] 
+| Name                  | Type                                                   | Description                                                                                                                        | Notes                 |
+| --------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| **ContextAttributes** | Pointer to **map[string]string**                       |                                                                                                                                    | [optional]            |
+| **Description**       | Pointer to **string**                                  |                                                                                                                                    | [optional]            |
+| **Destinations**      | **[]string**                                           |                                                                                                                                    |
+| **Enabled**           | Pointer to **bool**                                    |                                                                                                                                    | [optional]            |
+| **Id**                | Pointer to [**Nullablestring**](string.md)             |                                                                                                                                    | [optional]            |
+| **IsRealTime**        | Pointer to **bool**                                    |                                                                                                                                    | [optional]            |
+| **LastEditedBy**      | Pointer to **NullableString**                          |                                                                                                                                    | [optional] [readonly] |
+| **LastSatisfiedAt**   | Pointer to **NullableInt64**                           | Time when alert was last satisfied. Unix timestamp.                                                                                | [optional] [readonly] |
+| **LastTriggeredAt**   | Pointer to **NullableInt64**                           | Time when alert was last triggered. Unix timestamp.                                                                                | [optional] [readonly] |
+| **Name**              | Pointer to **string**                                  |                                                                                                                                    | [optional]            |
+| **OrgId**             | Pointer to **string**                                  |                                                                                                                                    | [optional]            |
+| **Owner**             | Pointer to **NullableString**                          |                                                                                                                                    | [optional]            |
+| **QueryCondition**    | Pointer to [**QueryCondition**](QueryCondition.md)     |                                                                                                                                    | [optional]            |
+| **RowTemplate**       | Pointer to **string**                                  |                                                                                                                                    | [optional]            |
+| **StreamName**        | Pointer to **string**                                  |                                                                                                                                    | [optional]            |
+| **StreamType**        | Pointer to [**StreamType**](StreamType.md)             |                                                                                                                                    | [optional]            |
+| **TriggerCondition**  | Pointer to [**TriggerCondition**](TriggerCondition.md) |                                                                                                                                    | [optional]            |
+| **TzOffset**          | Pointer to **int32**                                   | Timezone offset in minutes. Negative seconds means the western hemisphere                                                          | [optional]            |
+| **UpdatedAt**         | Pointer to **NullableInt64**                           | Time when alert was last updated. Unix timestamp.                                                                                  | [optional] [readonly] |
+| **FolderId**          | Pointer to **NullableString**                          | Optional folder ID indicating the folder in which to create the alert. If omitted the alert will be created in the default folder. | [optional]            |
 
 ## Methods
 
@@ -73,12 +73,14 @@ HasContextAttributes returns a boolean if a field has been set.
 
 `func (o *CreateAlertRequestBody) SetContextAttributesNil(b bool)`
 
- SetContextAttributesNil sets the value for ContextAttributes to be an explicit nil
+SetContextAttributesNil sets the value for ContextAttributes to be an explicit nil
 
 ### UnsetContextAttributes
+
 `func (o *CreateAlertRequestBody) UnsetContextAttributes()`
 
 UnsetContextAttributes ensures that no value is present for ContextAttributes, not even an explicit nil
+
 ### GetDescription
 
 `func (o *CreateAlertRequestBody) GetDescription() string`
@@ -123,7 +125,6 @@ and a boolean to check if the value has been set.
 
 SetDestinations sets Destinations field to given value.
 
-
 ### GetEnabled
 
 `func (o *CreateAlertRequestBody) GetEnabled() bool`
@@ -151,20 +152,20 @@ HasEnabled returns a boolean if a field has been set.
 
 ### GetId
 
-`func (o *CreateAlertRequestBody) GetId() Ksuid`
+`func (o *CreateAlertRequestBody) GetId() string`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *CreateAlertRequestBody) GetIdOk() (*Ksuid, bool)`
+`func (o *CreateAlertRequestBody) GetIdOk() (*string, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *CreateAlertRequestBody) SetId(v Ksuid)`
+`func (o *CreateAlertRequestBody) SetId(v string)`
 
 SetId sets Id field to given value.
 
@@ -178,12 +179,14 @@ HasId returns a boolean if a field has been set.
 
 `func (o *CreateAlertRequestBody) SetIdNil(b bool)`
 
- SetIdNil sets the value for Id to be an explicit nil
+SetIdNil sets the value for Id to be an explicit nil
 
 ### UnsetId
+
 `func (o *CreateAlertRequestBody) UnsetId()`
 
 UnsetId ensures that no value is present for Id, not even an explicit nil
+
 ### GetIsRealTime
 
 `func (o *CreateAlertRequestBody) GetIsRealTime() bool`
@@ -238,12 +241,14 @@ HasLastEditedBy returns a boolean if a field has been set.
 
 `func (o *CreateAlertRequestBody) SetLastEditedByNil(b bool)`
 
- SetLastEditedByNil sets the value for LastEditedBy to be an explicit nil
+SetLastEditedByNil sets the value for LastEditedBy to be an explicit nil
 
 ### UnsetLastEditedBy
+
 `func (o *CreateAlertRequestBody) UnsetLastEditedBy()`
 
 UnsetLastEditedBy ensures that no value is present for LastEditedBy, not even an explicit nil
+
 ### GetLastSatisfiedAt
 
 `func (o *CreateAlertRequestBody) GetLastSatisfiedAt() int64`
@@ -273,12 +278,14 @@ HasLastSatisfiedAt returns a boolean if a field has been set.
 
 `func (o *CreateAlertRequestBody) SetLastSatisfiedAtNil(b bool)`
 
- SetLastSatisfiedAtNil sets the value for LastSatisfiedAt to be an explicit nil
+SetLastSatisfiedAtNil sets the value for LastSatisfiedAt to be an explicit nil
 
 ### UnsetLastSatisfiedAt
+
 `func (o *CreateAlertRequestBody) UnsetLastSatisfiedAt()`
 
 UnsetLastSatisfiedAt ensures that no value is present for LastSatisfiedAt, not even an explicit nil
+
 ### GetLastTriggeredAt
 
 `func (o *CreateAlertRequestBody) GetLastTriggeredAt() int64`
@@ -308,12 +315,14 @@ HasLastTriggeredAt returns a boolean if a field has been set.
 
 `func (o *CreateAlertRequestBody) SetLastTriggeredAtNil(b bool)`
 
- SetLastTriggeredAtNil sets the value for LastTriggeredAt to be an explicit nil
+SetLastTriggeredAtNil sets the value for LastTriggeredAt to be an explicit nil
 
 ### UnsetLastTriggeredAt
+
 `func (o *CreateAlertRequestBody) UnsetLastTriggeredAt()`
 
 UnsetLastTriggeredAt ensures that no value is present for LastTriggeredAt, not even an explicit nil
+
 ### GetName
 
 `func (o *CreateAlertRequestBody) GetName() string`
@@ -393,12 +402,14 @@ HasOwner returns a boolean if a field has been set.
 
 `func (o *CreateAlertRequestBody) SetOwnerNil(b bool)`
 
- SetOwnerNil sets the value for Owner to be an explicit nil
+SetOwnerNil sets the value for Owner to be an explicit nil
 
 ### UnsetOwner
+
 `func (o *CreateAlertRequestBody) UnsetOwner()`
 
 UnsetOwner ensures that no value is present for Owner, not even an explicit nil
+
 ### GetQueryCondition
 
 `func (o *CreateAlertRequestBody) GetQueryCondition() QueryCondition`
@@ -578,12 +589,14 @@ HasUpdatedAt returns a boolean if a field has been set.
 
 `func (o *CreateAlertRequestBody) SetUpdatedAtNil(b bool)`
 
- SetUpdatedAtNil sets the value for UpdatedAt to be an explicit nil
+SetUpdatedAtNil sets the value for UpdatedAt to be an explicit nil
 
 ### UnsetUpdatedAt
+
 `func (o *CreateAlertRequestBody) UnsetUpdatedAt()`
 
 UnsetUpdatedAt ensures that no value is present for UpdatedAt, not even an explicit nil
+
 ### GetFolderId
 
 `func (o *CreateAlertRequestBody) GetFolderId() string`
@@ -613,13 +626,12 @@ HasFolderId returns a boolean if a field has been set.
 
 `func (o *CreateAlertRequestBody) SetFolderIdNil(b bool)`
 
- SetFolderIdNil sets the value for FolderId to be an explicit nil
+SetFolderIdNil sets the value for FolderId to be an explicit nil
 
 ### UnsetFolderId
+
 `func (o *CreateAlertRequestBody) UnsetFolderId()`
 
 UnsetFolderId ensures that no value is present for FolderId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
