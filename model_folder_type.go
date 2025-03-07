@@ -19,12 +19,6 @@ import (
 // FolderType Indicates the type of data that the folder can contain.
 type FolderType string
 
-// List of FolderType
-const (
-	DASHBOARDS FolderType = "dashboards"
-	ALERTS FolderType = "alerts"
-)
-
 // All allowed values of FolderType enum
 var AllowedFolderTypeEnumValues = []FolderType{
 	"dashboards",

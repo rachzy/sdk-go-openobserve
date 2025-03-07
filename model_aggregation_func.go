@@ -21,14 +21,7 @@ type AggregationFunc string
 
 // List of AggregationFunc
 const (
-	COUNT AggregationFunc = "count"
 	COUNT_DISTINCT AggregationFunc = "count-distinct"
-	HISTOGRAM AggregationFunc = "histogram"
-	SUM AggregationFunc = "sum"
-	MIN AggregationFunc = "min"
-	MAX AggregationFunc = "max"
-	AVG AggregationFunc = "avg"
-	MEDIAN AggregationFunc = "median"
 )
 
 // All allowed values of AggregationFunc enum

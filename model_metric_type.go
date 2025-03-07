@@ -30,7 +30,6 @@ const (
 	SUMMARY MetricType = "Summary"
 	INFO MetricType = "Info"
 	STATE_SET MetricType = "StateSet"
-	EMPTY MetricType = "Empty"
 )
 
 // All allowed values of MetricType enum
