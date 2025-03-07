@@ -25,16 +25,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	emailId := "emailId_example" // string | User's email id
-	userOrgRole := *openapiclient.NewUserOrgRole(openapiclient.UserRole("admin")) // UserOrgRole | User role
+	userOrgRole := *openobserve.NewUserOrgRole(openobserve.UserRole("admin")) // UserOrgRole | User role
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.UsersAPI.AddUserToOrg(context.Background(), orgId, emailId).UserOrgRole(userOrgRole).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UsersAPI.AddUserToOrg``: %v\n", err)
@@ -94,15 +94,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	emailId := "emailId_example" // string | User name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.UsersAPI.RemoveUserFromOrg(context.Background(), orgId, emailId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UsersAPI.RemoveUserFromOrg``: %v\n", err)
@@ -160,14 +160,14 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.UsersAPI.UserList(context.Background(), orgId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UsersAPI.UserList``: %v\n", err)
@@ -224,15 +224,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	userRequest := *openapiclient.NewUserRequest("Email_example", "Password_example") // UserRequest | User data
+	userRequest := *openobserve.NewUserRequest("Email_example", "Password_example") // UserRequest | User data
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.UsersAPI.UserSave(context.Background(), orgId).UserRequest(userRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UsersAPI.UserSave``: %v\n", err)
@@ -291,16 +291,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	emailId := "emailId_example" // string | User's email id
-	updateUser := *openapiclient.NewUpdateUser() // UpdateUser | User data
+	updateUser := *openobserve.NewUpdateUser() // UpdateUser | User data
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.UsersAPI.UserUpdate(context.Background(), orgId, emailId).UpdateUser(updateUser).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UsersAPI.UserUpdate``: %v\n", err)

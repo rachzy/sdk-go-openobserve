@@ -29,15 +29,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	body := "[{"__name__":"metrics stream name","__type__":"counter / gauge / histogram / summary","_timestamp":1687175143,"label_name1":"label_value1","label_name2":"label_value2","value":1.2}]" // string | Ingest data (json array)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.MetricsAPI.MetricsIngestionJson(context.Background(), orgId).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MetricsAPI.MetricsIngestionJson``: %v\n", err)
@@ -96,15 +96,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	query := "query_example" // string | Prometheus expression query string.
 	orgId := "orgId_example" // string |
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.MetricsAPI.PrometheusFormatQuery(context.Background(), orgId).Query(query).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MetricsAPI.PrometheusFormatQuery``: %v\n", err)
@@ -162,7 +162,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -172,8 +172,8 @@ func main() {
 	start := "start_example" // string | <rfc3339 | unix_timestamp>: Start timestamp (optional)
 	end := "end_example" // string | <rfc3339 | unix_timestamp>: End timestamp (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.MetricsAPI.PrometheusLabelValues(context.Background(), orgId, labelName).Match(match).Start(start).End(end).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MetricsAPI.PrometheusLabelValues``: %v\n", err)
@@ -235,7 +235,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -244,8 +244,8 @@ func main() {
 	start := "start_example" // string | <rfc3339 | unix_timestamp>: Start timestamp (optional)
 	end := "end_example" // string | <rfc3339 | unix_timestamp>: End timestamp (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.MetricsAPI.PrometheusLabels(context.Background(), orgId).Match(match).Start(start).End(end).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MetricsAPI.PrometheusLabels``: %v\n", err)
@@ -306,7 +306,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -314,8 +314,8 @@ func main() {
 	limit := "limit_example" // string | Maximum number of metrics to return
 	metric := "metric_example" // string | A metric name to filter metadata for. All metric metadata is retrieved if left empty (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.MetricsAPI.PrometheusMetadata(context.Background(), orgId).Limit(limit).Metric(metric).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MetricsAPI.PrometheusMetadata``: %v\n", err)
@@ -375,7 +375,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -384,8 +384,8 @@ func main() {
 	time := "time_example" // string | <rfc3339 | unix_timestamp>: Evaluation timestamp. Optional (optional)
 	timeout := "timeout_example" // string | Evaluation timeout (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.MetricsAPI.PrometheusQuery(context.Background(), orgId).Query(query).Time(time).Timeout(timeout).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MetricsAPI.PrometheusQuery``: %v\n", err)
@@ -446,7 +446,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -457,8 +457,8 @@ func main() {
 	step := "step_example" // string | Query resolution step width in duration format or float number of seconds (optional)
 	timeout := "timeout_example" // string | Evaluation timeout (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.MetricsAPI.PrometheusRangeQuery(context.Background(), orgId).Query(query).Start(start).End(end).Step(step).Timeout(timeout).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MetricsAPI.PrometheusRangeQuery``: %v\n", err)
@@ -521,15 +521,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	body := "body_example" // string | prometheus WriteRequest
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.MetricsAPI.PrometheusRemoteWrite(context.Background(), orgId).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MetricsAPI.PrometheusRemoteWrite``: %v\n", err)
@@ -588,7 +588,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -597,8 +597,8 @@ func main() {
 	start := "start_example" // string | <rfc3339 | unix_timestamp>: Start timestamp (optional)
 	end := "end_example" // string | <rfc3339 | unix_timestamp>: End timestamp (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.MetricsAPI.PrometheusSeries(context.Background(), orgId).Match(match).Start(start).End(end).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MetricsAPI.PrometheusSeries``: %v\n", err)

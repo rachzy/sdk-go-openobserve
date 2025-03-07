@@ -21,13 +21,13 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.MetaAPI.Healthz(context.Background()).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MetaAPI.Healthz``: %v\n", err)

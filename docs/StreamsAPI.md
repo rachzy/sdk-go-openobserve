@@ -26,7 +26,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -34,8 +34,8 @@ func main() {
 	streamName := "streamName_example" // string | Stream name
 	type_ := "type__example" // string | Stream type
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.StreamsAPI.StreamDelete(context.Background(), orgId, streamName).Type_(type_).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `StreamsAPI.StreamDelete``: %v\n", err)
@@ -95,17 +95,17 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	streamName := "streamName_example" // string | Stream name
 	type_ := "type__example" // string | Stream type
-	streamDeleteFields := *openapiclient.NewStreamDeleteFields([]string{"Fields_example"}) // StreamDeleteFields | Stream delete fields
+	streamDeleteFields := *openobserve.NewStreamDeleteFields([]string{"Fields_example"}) // StreamDeleteFields | Stream delete fields
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.StreamsAPI.StreamDeleteFields(context.Background(), orgId, streamName).Type_(type_).StreamDeleteFields(streamDeleteFields).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `StreamsAPI.StreamDeleteFields``: %v\n", err)
@@ -166,7 +166,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -177,8 +177,8 @@ func main() {
 	limit := int32(56) // int32 | Limit
 	sort := "sort_example" // string | Sort
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.StreamsAPI.StreamList(context.Background(), orgId).Type_(type_).Keyword(keyword).Offset(offset).Limit(limit).Sort(sort).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `StreamsAPI.StreamList``: %v\n", err)
@@ -241,7 +241,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -252,8 +252,8 @@ func main() {
 	offset := int32(56) // int32 | Offset
 	limit := int32(56) // int32 | Limit
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.StreamsAPI.StreamSchema(context.Background(), orgId, streamName).Type_(type_).Keyword(keyword).Offset(offset).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `StreamsAPI.StreamSchema``: %v\n", err)
@@ -316,17 +316,17 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	streamName := "streamName_example" // string | Stream name
 	type_ := "type__example" // string | Stream type
-	streamSettings := *openapiclient.NewStreamSettings() // StreamSettings | Stream settings
+	streamSettings := *openobserve.NewStreamSettings() // StreamSettings | Stream settings
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.StreamsAPI.StreamSettings(context.Background(), orgId, streamName).Type_(type_).StreamSettings(streamSettings).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `StreamsAPI.StreamSettings``: %v\n", err)
@@ -387,17 +387,17 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	streamName := "streamName_example" // string | Stream name
 	type_ := "type__example" // string | Stream type
-	updateStreamSettings := *openapiclient.NewUpdateStreamSettings() // UpdateStreamSettings | Stream settings
+	updateStreamSettings := *openobserve.NewUpdateStreamSettings() // UpdateStreamSettings | Stream settings
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.StreamsAPI.UpdateStreamSettings(context.Background(), orgId, streamName).Type_(type_).UpdateStreamSettings(updateStreamSettings).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `StreamsAPI.UpdateStreamSettings``: %v\n", err)

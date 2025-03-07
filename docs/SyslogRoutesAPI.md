@@ -24,15 +24,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	syslogRoute := *openapiclient.NewSyslogRoute() // SyslogRoute | SyslogRoute details
+	syslogRoute := *openobserve.NewSyslogRoute() // SyslogRoute | SyslogRoute details
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SyslogRoutesAPI.CreateSyslogRoute(context.Background(), orgId).SyslogRoute(syslogRoute).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SyslogRoutesAPI.CreateSyslogRoute``: %v\n", err)
@@ -91,15 +91,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	id := "id_example" // string | SyslogRoute Id
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SyslogRoutesAPI.DeleteSyslogRoute(context.Background(), orgId, id).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SyslogRoutesAPI.DeleteSyslogRoute``: %v\n", err)
@@ -157,14 +157,14 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SyslogRoutesAPI.ListSyslogRoutes(context.Background(), orgId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SyslogRoutesAPI.ListSyslogRoutes``: %v\n", err)
@@ -221,16 +221,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	id := "id_example" // string | Route ID
-	syslogRoute := *openapiclient.NewSyslogRoute() // SyslogRoute | SyslogRoute details
+	syslogRoute := *openobserve.NewSyslogRoute() // SyslogRoute | SyslogRoute details
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SyslogRoutesAPI.UpdateSyslogRoute(context.Background(), orgId, id).SyslogRoute(syslogRoute).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SyslogRoutesAPI.UpdateSyslogRoute``: %v\n", err)

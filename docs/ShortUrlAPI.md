@@ -22,15 +22,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	shortId := "ddbffcea3ad44292" // string | The short ID to retrieve the original URL
 	orgId := "orgId_example" // string |
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	r, err := apiClient.ShortUrlAPI.Retrieve(context.Background(), shortId, orgId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ShortUrlAPI.Retrieve``: %v\n", err)
@@ -86,15 +86,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string |
-	shortenUrlRequest := *openapiclient.NewShortenUrlRequest("OriginalUrl_example") // ShortenUrlRequest | The original URL to shorten
+	shortenUrlRequest := *openobserve.NewShortenUrlRequest("OriginalUrl_example") // ShortenUrlRequest | The original URL to shorten
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.ShortUrlAPI.Shorten(context.Background(), orgId).ShortenUrlRequest(shortenUrlRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ShortUrlAPI.Shorten``: %v\n", err)

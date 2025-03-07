@@ -32,16 +32,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string |
 	dashboardId := "dashboardId_example" // string |
-	timedAnnotationReq := *openapiclient.NewTimedAnnotationReq([]openapiclient.TimedAnnotation{*openapiclient.NewTimedAnnotation([]string{"Panels_example"}, int64(123), []string{"Tags_example"}, "Title_example")}) // TimedAnnotationReq | Timed annotation request payload
+	timedAnnotationReq := *openobserve.NewTimedAnnotationReq([]openobserve.TimedAnnotation{*openobserve.NewTimedAnnotation([]string{"Panels_example"}, int64(123), []string{"Tags_example"}, "Title_example")}) // TimedAnnotationReq | Timed annotation request payload
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.DashboardsAPI.CreateAnnotations(context.Background(), orgId, dashboardId).TimedAnnotationReq(timedAnnotationReq).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DashboardsAPI.CreateAnnotations``: %v\n", err)
@@ -101,15 +101,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	body := JsonValue({"description":"Traffic patterns and network performance of the infrastructure","title":"Network Traffic Overview"}) // JsonValue | Dashboard details
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.DashboardsAPI.CreateDashboard(context.Background(), orgId).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DashboardsAPI.CreateDashboard``: %v\n", err)
@@ -168,16 +168,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string |
 	dashboardId := "dashboardId_example" // string |
-	timedAnnotationDelete := *openapiclient.NewTimedAnnotationDelete([]string{"AnnotationIds_example"}) // TimedAnnotationDelete | Timed annotation delete request payload
+	timedAnnotationDelete := *openobserve.NewTimedAnnotationDelete([]string{"AnnotationIds_example"}) // TimedAnnotationDelete | Timed annotation delete request payload
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	r, err := apiClient.DashboardsAPI.DeleteAnnotations(context.Background(), orgId, dashboardId).TimedAnnotationDelete(timedAnnotationDelete).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DashboardsAPI.DeleteAnnotations``: %v\n", err)
@@ -235,15 +235,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	dashboardId := "dashboardId_example" // string | Dashboard ID
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.DashboardsAPI.DeleteDashboard(context.Background(), orgId, dashboardId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DashboardsAPI.DeleteDashboard``: %v\n", err)
@@ -301,7 +301,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -311,8 +311,8 @@ func main() {
 	dashboardId := "dashboardId_example" // string |
 	panels := "panels_example" // string | Commas separated list of panels (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.DashboardsAPI.GetAnnotations(context.Background(), orgId, dashboardId).StartTime(startTime).EndTime(endTime).Panels(panels).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DashboardsAPI.GetAnnotations``: %v\n", err)
@@ -374,15 +374,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	dashboardId := "dashboardId_example" // string | Dashboard ID
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.DashboardsAPI.GetDashboard(context.Background(), orgId, dashboardId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DashboardsAPI.GetDashboard``: %v\n", err)
@@ -440,7 +440,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -449,8 +449,8 @@ func main() {
 	title := "title_example" // string | The optional case-insensitive title substring with which to filter dashboards. (optional)
 	pageSize := int64(789) // int64 | The optional number of dashboards to retrieve. If not set then all dashboards that match the query parameters will be returned.  Currently this parameter is only untilized by the API when the `title` parameter is also set. (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.DashboardsAPI.ListDashboards(context.Background(), orgId).Folder(folder).Title(title).PageSize(pageSize).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DashboardsAPI.ListDashboards``: %v\n", err)
@@ -511,16 +511,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	dashboardId := "dashboardId_example" // string | Dashboard ID
-	moveDashboardRequestBody := *openapiclient.NewMoveDashboardRequestBody("From_example", "To_example") // MoveDashboardRequestBody | MoveDashboard details
+	moveDashboardRequestBody := *openobserve.NewMoveDashboardRequestBody("From_example", "To_example") // MoveDashboardRequestBody | MoveDashboard details
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.DashboardsAPI.MoveDashboard(context.Background(), orgId, dashboardId).MoveDashboardRequestBody(moveDashboardRequestBody).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DashboardsAPI.MoveDashboard``: %v\n", err)
@@ -578,15 +578,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	moveDashboardsRequestBody := *openapiclient.NewMoveDashboardsRequestBody([]string{"DashboardIds_example"}, "DstFolderId_example") // MoveDashboardsRequestBody | Identifies dashboards and the destination folder
+	moveDashboardsRequestBody := *openobserve.NewMoveDashboardsRequestBody([]string{"DashboardIds_example"}, "DstFolderId_example") // MoveDashboardsRequestBody | Identifies dashboards and the destination folder
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.DashboardsAPI.MoveDashboards(context.Background(), orgId).MoveDashboardsRequestBody(moveDashboardsRequestBody).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DashboardsAPI.MoveDashboards``: %v\n", err)
@@ -645,7 +645,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -654,8 +654,8 @@ func main() {
 	timedAnnotationId := "timedAnnotationId_example" // string |
 	requestBody := []string{"Property_example"} // []string | IDs of dashboard panels from which to remove the timed annotation
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	r, err := apiClient.DashboardsAPI.RemoveTimedAnnotationFromPanel(context.Background(), orgId, dashboardId, timedAnnotationId).RequestBody(requestBody).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DashboardsAPI.RemoveTimedAnnotationFromPanel``: %v\n", err)
@@ -714,17 +714,17 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string |
 	dashboardId := "dashboardId_example" // string |
 	timedAnnotationId := "timedAnnotationId_example" // string |
-	timedAnnotation := *openapiclient.NewTimedAnnotation([]string{"Panels_example"}, int64(123), []string{"Tags_example"}, "Title_example") // TimedAnnotation | Timed annotation update request payload
+	timedAnnotation := *openobserve.NewTimedAnnotation([]string{"Panels_example"}, int64(123), []string{"Tags_example"}, "Title_example") // TimedAnnotation | Timed annotation update request payload
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	r, err := apiClient.DashboardsAPI.UpdateAnnotations(context.Background(), orgId, dashboardId, timedAnnotationId).TimedAnnotation(timedAnnotation).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DashboardsAPI.UpdateAnnotations``: %v\n", err)
@@ -783,7 +783,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -791,8 +791,8 @@ func main() {
 	dashboardId := "dashboardId_example" // string | Dashboard ID
 	body := JsonValue(987) // JsonValue | Dashboard details
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.DashboardsAPI.UpdateDashboard(context.Background(), orgId, dashboardId).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DashboardsAPI.UpdateDashboard``: %v\n", err)

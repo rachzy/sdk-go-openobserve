@@ -26,7 +26,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -37,8 +37,8 @@ func main() {
 	regions := "regions_example" // string | regions, split by comma (optional)
 	timeout := int64(789) // int64 | timeout, seconds (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SearchAPI.SearchAround(context.Background(), orgId, streamName).Key(key).Size(size).Regions(regions).Timeout(timeout).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SearchAPI.SearchAround``: %v\n", err)
@@ -101,7 +101,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -112,8 +112,8 @@ func main() {
 	regions := "regions_example" // string | regions, split by comma (optional)
 	timeout := int64(789) // int64 | timeout, seconds (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SearchAPI.SearchAroundV2(context.Background(), orgId, streamName).Size(size).Body(body).Regions(regions).Timeout(timeout).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SearchAPI.SearchAroundV2``: %v\n", err)
@@ -176,15 +176,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization ID
-	searchHistoryRequest := *openapiclient.NewSearchHistoryRequest(int64(123), int64(123)) // SearchHistoryRequest | Search history request parameters
+	searchHistoryRequest := *openobserve.NewSearchHistoryRequest(int64(123), int64(123)) // SearchHistoryRequest | Search history request parameters
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SearchAPI.SearchHistory(context.Background(), orgId).SearchHistoryRequest(searchHistoryRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SearchAPI.SearchHistory``: %v\n", err)
@@ -243,15 +243,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	searchRequest := *openapiclient.NewSearchRequest(*openapiclient.NewSearchQuery("Sql_example")) // SearchRequest | Search query
+	searchRequest := *openobserve.NewSearchRequest(*openobserve.NewSearchQuery("Sql_example")) // SearchRequest | Search query
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SearchAPI.SearchPartition(context.Background(), orgId).SearchRequest(searchRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SearchAPI.SearchPartition``: %v\n", err)
@@ -310,15 +310,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	searchRequest := *openapiclient.NewSearchRequest(*openapiclient.NewSearchQuery("Sql_example")) // SearchRequest | Search query
+	searchRequest := *openobserve.NewSearchRequest(*openobserve.NewSearchQuery("Sql_example")) // SearchRequest | Search query
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SearchAPI.SearchSQL(context.Background(), orgId).SearchRequest(searchRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SearchAPI.SearchSQL``: %v\n", err)
@@ -377,7 +377,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -393,8 +393,8 @@ func main() {
 	timeout := int64(789) // int64 | timeout, seconds (optional)
 	noCount := true // bool | no need count, true of false (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SearchAPI.SearchValues(context.Background(), orgId, streamName).Fields(fields).Size(size).StartTime(startTime).EndTime(endTime).Filter(filter).Keyword(keyword).Regions(regions).Timeout(timeout).NoCount(noCount).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SearchAPI.SearchValues``: %v\n", err)

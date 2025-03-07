@@ -23,15 +23,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	body := "[{"Athlete":"Alfred","City":"Athens","Country":"HUN","Discipline":"Swimming","Sport":"Aquatics","Year":1896},{"Athlete":"HERSCHMANN","City":"Athens","Country":"CHN","Discipline":"Swimming","Sport":"Aquatics","Year":1896}]" // string | Ingest data (json array)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.RumAPI.LogIngestionJson(context.Background(), orgId).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `RumAPI.LogIngestionJson``: %v\n", err)
@@ -90,15 +90,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	body := "[{"Athlete":"Alfred","City":"Athens","Country":"HUN","Discipline":"Swimming","Sport":"Aquatics","Year":1896},{"Athlete":"HERSCHMANN","City":"Athens","Country":"CHN","Discipline":"Swimming","Sport":"Aquatics","Year":1896}]" // string | Ingest data (json array)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.RumAPI.ReplayIngestionJson(context.Background(), orgId).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `RumAPI.ReplayIngestionJson``: %v\n", err)
@@ -157,15 +157,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	body := "body_example" // string | Ingest data (multiple line json)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.RumAPI.RumIngestionMulti(context.Background(), orgId).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `RumAPI.RumIngestionMulti``: %v\n", err)

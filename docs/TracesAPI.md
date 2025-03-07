@@ -22,7 +22,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -35,8 +35,8 @@ func main() {
 	filter := "filter_example" // string | filter, eg: a=b AND c=d (optional)
 	timeout := int64(789) // int64 | timeout, seconds (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.TracesAPI.GetLatestTraces(context.Background(), orgId, streamName).From(from).Size(size).StartTime(startTime).EndTime(endTime).Filter(filter).Timeout(timeout).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `TracesAPI.GetLatestTraces``: %v\n", err)
@@ -101,15 +101,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string |
 	body := "body_example" // string | ExportTraceServiceRequest
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.TracesAPI.PostTraces(context.Background(), orgId).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `TracesAPI.PostTraces``: %v\n", err)

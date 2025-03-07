@@ -41,15 +41,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	createAlertRequestBody := *openapiclient.NewCreateAlertRequestBody([]string{"Destinations_example"}) // CreateAlertRequestBody | Alert data
+	createAlertRequestBody := *openobserve.NewCreateAlertRequestBody([]string{"Destinations_example"}) // CreateAlertRequestBody | Alert data
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.CreateAlert(context.Background(), orgId).CreateAlertRequestBody(createAlertRequestBody).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.CreateAlert``: %v\n", err)
@@ -108,15 +108,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	destination := *openapiclient.NewDestination() // Destination | Destination data
+	destination := *openobserve.NewDestination() // Destination | Destination data
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.CreateDestination(context.Background(), orgId).Destination(destination).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.CreateDestination``: %v\n", err)
@@ -175,15 +175,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	alertId := TODO // Ksuid | Alert ID
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.DeleteAlert(context.Background(), orgId, alertId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.DeleteAlert``: %v\n", err)
@@ -241,15 +241,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	destinationName := "destinationName_example" // string | Destination name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.DeleteAlertDestination(context.Background(), orgId, destinationName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.DeleteAlertDestination``: %v\n", err)
@@ -307,7 +307,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -315,8 +315,8 @@ func main() {
 	streamName := "streamName_example" // string | Stream name
 	alertName := "alertName_example" // string | Alert name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.DeleteAlert_0(context.Background(), orgId, streamName, alertName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.DeleteAlert_0``: %v\n", err)
@@ -375,7 +375,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -383,8 +383,8 @@ func main() {
 	alertId := TODO // Ksuid | Alert ID
 	value := true // bool | Set to `true` to enable the alert or `false` to disable the alert.
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.EnableAlert(context.Background(), orgId, alertId).Value(value).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.EnableAlert``: %v\n", err)
@@ -444,7 +444,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -453,8 +453,8 @@ func main() {
 	alertName := "alertName_example" // string | Alert name
 	value := true // bool | Enable or disable alert
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.EnableAlert_0(context.Background(), orgId, streamName, alertName).Value(value).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.EnableAlert_0``: %v\n", err)
@@ -515,15 +515,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	alertId := TODO // Ksuid | Alert ID
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.GetAlert(context.Background(), orgId, alertId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.GetAlert``: %v\n", err)
@@ -581,7 +581,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -589,8 +589,8 @@ func main() {
 	streamName := "streamName_example" // string | Stream name
 	alertName := "alertName_example" // string | Alert name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.GetAlert_0(context.Background(), orgId, streamName, alertName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.GetAlert_0``: %v\n", err)
@@ -649,15 +649,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	destinationName := "destinationName_example" // string | Destination name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.GetDestination(context.Background(), orgId, destinationName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.GetDestination``: %v\n", err)
@@ -715,13 +715,13 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	folder := "folder_example" // string | Optional folder ID filter parameter. (optional)
-	streamType := openapiclient.StreamType("logs") // StreamType | Optional stream type filter parameter. (optional)
+	streamType := openobserve.StreamType("logs") // StreamType | Optional stream type filter parameter. (optional)
 	streamName := "streamName_example" // string | Optional stream name filter parameter.  This parameter is only used if `stream_type` is also provided. (optional)
 	alertNameSubstring := "alertNameSubstring_example" // string | Optional case-insensitive name substring filter parameter. (optional)
 	owner := "owner_example" // string | Optional owner user filter parameter. (optional)
@@ -729,8 +729,8 @@ func main() {
 	pageSize := int64(789) // int64 | The optional number of alerts to retrieve. If not set then all alerts that match the query parameters will be returned. (optional)
 	pageIdx := int64(789) // int64 | The optional page index. If not set then defaults to `0`.  This parameter is only used if `page_size` is also set. (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.ListAlerts(context.Background(), orgId).Folder(folder).StreamType(streamType).StreamName(streamName).AlertNameSubstring(alertNameSubstring).Owner(owner).Enabled(enabled).PageSize(pageSize).PageIdx(pageIdx).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.ListAlerts``: %v\n", err)
@@ -796,14 +796,14 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.ListAlerts_0(context.Background(), orgId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.ListAlerts_0``: %v\n", err)
@@ -860,15 +860,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	module := "module_example" // string | Destination module filter, none, alert, or pipeline (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.ListDestinations(context.Background(), orgId).Module(module).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.ListDestinations``: %v\n", err)
@@ -927,15 +927,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	streamName := "streamName_example" // string | Stream name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.ListStreamAlerts(context.Background(), orgId, streamName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.ListStreamAlerts``: %v\n", err)
@@ -993,15 +993,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	moveAlertsRequestBody := *openapiclient.NewMoveAlertsRequestBody([]Ksuid{"TODO"}, "DstFolderId_example") // MoveAlertsRequestBody | Identifies alerts and the destination folder
+	moveAlertsRequestBody := *openobserve.NewMoveAlertsRequestBody([]Ksuid{"TODO"}, "DstFolderId_example") // MoveAlertsRequestBody | Identifies alerts and the destination folder
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.MoveAlerts(context.Background(), orgId).MoveAlertsRequestBody(moveAlertsRequestBody).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.MoveAlerts``: %v\n", err)
@@ -1060,16 +1060,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	streamName := "streamName_example" // string | Stream name
-	alert := *openapiclient.NewAlert([]string{"Destinations_example"}) // Alert | Alert data
+	alert := *openobserve.NewAlert([]string{"Destinations_example"}) // Alert | Alert data
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.SaveAlert(context.Background(), orgId, streamName).Alert(alert).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.SaveAlert``: %v\n", err)
@@ -1129,15 +1129,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	alertId := TODO // Ksuid | Alert ID
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.TriggerAlert(context.Background(), orgId, alertId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.TriggerAlert``: %v\n", err)
@@ -1195,7 +1195,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -1203,8 +1203,8 @@ func main() {
 	streamName := "streamName_example" // string | Stream name
 	alertName := "alertName_example" // string | Alert name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.TriggerAlert_0(context.Background(), orgId, streamName, alertName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.TriggerAlert_0``: %v\n", err)
@@ -1263,7 +1263,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -1271,8 +1271,8 @@ func main() {
 	alertId := TODO // Ksuid | Alert ID
 	body := Alert(987) // Alert | Alert data
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.UpdateAlert(context.Background(), orgId, alertId).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.UpdateAlert``: %v\n", err)
@@ -1332,17 +1332,17 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	streamName := "streamName_example" // string | Stream name
 	alertName := "alertName_example" // string | Alert name
-	alert := *openapiclient.NewAlert([]string{"Destinations_example"}) // Alert | Alert data
+	alert := *openobserve.NewAlert([]string{"Destinations_example"}) // Alert | Alert data
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.UpdateAlert_0(context.Background(), orgId, streamName, alertName).Alert(alert).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.UpdateAlert_0``: %v\n", err)
@@ -1403,16 +1403,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	destinationName := "destinationName_example" // string | Destination name
-	destination := *openapiclient.NewDestination() // Destination | Destination data
+	destination := *openobserve.NewDestination() // Destination | Destination data
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.AlertsAPI.UpdateDestination(context.Background(), orgId, destinationName).Destination(destination).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AlertsAPI.UpdateDestination``: %v\n", err)

@@ -24,15 +24,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	key := "key_example" // string | Key name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.KVAPI.GetKVValue(context.Background(), orgId, key).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `KVAPI.GetKVValue``: %v\n", err)
@@ -90,15 +90,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	prefix := "prefix_example" // string | Key prefix (optional)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.KVAPI.ListKVKeys(context.Background(), orgId).Prefix(prefix).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `KVAPI.ListKVKeys``: %v\n", err)
@@ -157,15 +157,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	key := "key_example" // string | Key name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.KVAPI.RemoveKVValue(context.Background(), orgId, key).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `KVAPI.RemoveKVValue``: %v\n", err)
@@ -223,7 +223,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -231,8 +231,8 @@ func main() {
 	key := "key_example" // string | Key name
 	body := "body_example" // string | Value of the key
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.KVAPI.SetKVValue(context.Background(), orgId, key).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `KVAPI.SetKVValue``: %v\n", err)

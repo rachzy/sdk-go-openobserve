@@ -23,15 +23,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	body := "body_example" // string | Ingest data (ndjson)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.LogsAPI.LogsIngestionBulk(context.Background(), orgId).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `LogsAPI.LogsIngestionBulk``: %v\n", err)
@@ -90,7 +90,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -98,8 +98,8 @@ func main() {
 	streamName := "streamName_example" // string | Stream name
 	body := "[{"Athlete":"Alfred","City":"Athens","Country":"HUN","Discipline":"Swimming","Sport":"Aquatics","Year":1896},{"Athlete":"HERSCHMANN","City":"Athens","Country":"CHN","Discipline":"Swimming","Sport":"Aquatics","Year":1896}]" // string | Ingest data (json array)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.LogsAPI.LogsIngestionJson(context.Background(), orgId, streamName).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `LogsAPI.LogsIngestionJson``: %v\n", err)
@@ -159,7 +159,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -167,8 +167,8 @@ func main() {
 	streamName := "streamName_example" // string | Stream name
 	body := "body_example" // string | Ingest data (multiple line json)
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.LogsAPI.LogsIngestionMulti(context.Background(), orgId, streamName).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `LogsAPI.LogsIngestionMulti``: %v\n", err)

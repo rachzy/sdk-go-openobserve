@@ -32,16 +32,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	folderType := openapiclient.FolderType("dashboards") // FolderType | Type of data the folder can contain
-	createFolderRequestBody := *openapiclient.NewCreateFolderRequestBody("Description_example", "Name_example") // CreateFolderRequestBody | Folder details
+	folderType := openobserve.FolderType("dashboards") // FolderType | Type of data the folder can contain
+	createFolderRequestBody := *openobserve.NewCreateFolderRequestBody("Description_example", "Name_example") // CreateFolderRequestBody | Folder details
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.FoldersAPI.CreateFolder(context.Background(), orgId, folderType).CreateFolderRequestBody(createFolderRequestBody).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FoldersAPI.CreateFolder``: %v\n", err)
@@ -101,15 +101,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	createFolderRequestBody := *openapiclient.NewCreateFolderRequestBody("Description_example", "Name_example") // CreateFolderRequestBody | Folder details
+	createFolderRequestBody := *openobserve.NewCreateFolderRequestBody("Description_example", "Name_example") // CreateFolderRequestBody | Folder details
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.FoldersAPI.CreateFolder_0(context.Background(), orgId).CreateFolderRequestBody(createFolderRequestBody).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FoldersAPI.CreateFolder_0``: %v\n", err)
@@ -168,16 +168,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	folderType := openapiclient.FolderType("dashboards") // FolderType | Type of data the folder can contain
+	folderType := openobserve.FolderType("dashboards") // FolderType | Type of data the folder can contain
 	folderId := "folderId_example" // string | Folder ID
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.FoldersAPI.DeleteFolder(context.Background(), orgId, folderType, folderId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FoldersAPI.DeleteFolder``: %v\n", err)
@@ -236,15 +236,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	folderId := "folderId_example" // string | Folder ID
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.FoldersAPI.DeleteFolder_0(context.Background(), orgId, folderId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FoldersAPI.DeleteFolder_0``: %v\n", err)
@@ -302,16 +302,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	folderType := openapiclient.FolderType("dashboards") // FolderType | Type of data the folder can contain
+	folderType := openobserve.FolderType("dashboards") // FolderType | Type of data the folder can contain
 	folderId := "folderId_example" // string | Folder ID
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.FoldersAPI.GetFolder(context.Background(), orgId, folderType, folderId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FoldersAPI.GetFolder``: %v\n", err)
@@ -370,16 +370,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	folderType := openapiclient.FolderType("dashboards") // FolderType | Type of data the folder can contain
+	folderType := openobserve.FolderType("dashboards") // FolderType | Type of data the folder can contain
 	folderName := "folderName_example" // string | Folder Name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.FoldersAPI.GetFolderByName(context.Background(), orgId, folderType, folderName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FoldersAPI.GetFolderByName``: %v\n", err)
@@ -438,15 +438,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	folderName := "folderName_example" // string | Folder Name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.FoldersAPI.GetFolderByName_0(context.Background(), orgId, folderName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FoldersAPI.GetFolderByName_0``: %v\n", err)
@@ -504,15 +504,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	folderId := "folderId_example" // string | Folder ID
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.FoldersAPI.GetFolder_0(context.Background(), orgId, folderId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FoldersAPI.GetFolder_0``: %v\n", err)
@@ -570,15 +570,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	folderType := openapiclient.FolderType("dashboards") // FolderType | Type of data the folder can contain
+	folderType := openobserve.FolderType("dashboards") // FolderType | Type of data the folder can contain
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.FoldersAPI.ListFolders(context.Background(), orgId, folderType).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FoldersAPI.ListFolders``: %v\n", err)
@@ -636,14 +636,14 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.FoldersAPI.ListFolders_0(context.Background(), orgId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FoldersAPI.ListFolders_0``: %v\n", err)
@@ -700,17 +700,17 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	folderType := openapiclient.FolderType("dashboards") // FolderType | Type of data the folder can contain
+	folderType := openobserve.FolderType("dashboards") // FolderType | Type of data the folder can contain
 	folderId := "folderId_example" // string | Folder name
 	body := Folder({"description":"Traffic patterns and network performance of the infrastructure","title":"Infra"}) // Folder | Folder details
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.FoldersAPI.UpdateFolder(context.Background(), orgId, folderType, folderId).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FoldersAPI.UpdateFolder``: %v\n", err)
@@ -771,7 +771,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -779,8 +779,8 @@ func main() {
 	folderId := "folderId_example" // string | Folder name
 	body := Folder({"description":"Traffic patterns and network performance of the infrastructure","title":"Infra"}) // Folder | Folder details
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.FoldersAPI.UpdateFolder_0(context.Background(), orgId, folderId).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FoldersAPI.UpdateFolder_0``: %v\n", err)

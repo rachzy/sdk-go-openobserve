@@ -23,15 +23,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
-	createViewRequest := *openapiclient.NewCreateViewRequest(interface{}(123), "ViewName_example") // CreateViewRequest | Create view data
+	createViewRequest := *openobserve.NewCreateViewRequest(interface{}(123), "ViewName_example") // CreateViewRequest | Create view data
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SavedViewsAPI.CreateSavedViews(context.Background(), orgId).CreateViewRequest(createViewRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SavedViewsAPI.CreateSavedViews``: %v\n", err)
@@ -88,15 +88,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	viewId := "viewId_example" // string | The view_id to delete
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SavedViewsAPI.DeleteSavedViews(context.Background(), orgId, viewId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SavedViewsAPI.DeleteSavedViews``: %v\n", err)
@@ -152,15 +152,15 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	viewId := "viewId_example" // string | The view_id which was stored
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SavedViewsAPI.GetSavedView(context.Background(), orgId, viewId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SavedViewsAPI.GetSavedView``: %v\n", err)
@@ -216,14 +216,14 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SavedViewsAPI.ListSavedViews(context.Background(), orgId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SavedViewsAPI.ListSavedViews``: %v\n", err)
@@ -278,16 +278,16 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/rachzy/sdk-go-openobserve"
+	openobserve "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	orgId := "orgId_example" // string | Organization name
 	viewId := "viewId_example" // string | View id to be updated
-	updateViewRequest := *openapiclient.NewUpdateViewRequest(interface{}(123), "ViewName_example") // UpdateViewRequest | Update view data
+	updateViewRequest := *openobserve.NewUpdateViewRequest(interface{}(123), "ViewName_example") // UpdateViewRequest | Update view data
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := openobserve.NewConfiguration()
+	apiClient := openobserve.NewAPIClient(configuration)
 	resp, r, err := apiClient.SavedViewsAPI.UpdateSavedViews(context.Background(), orgId, viewId).UpdateViewRequest(updateViewRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SavedViewsAPI.UpdateSavedViews``: %v\n", err)
