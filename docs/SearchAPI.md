@@ -1,17 +1,15 @@
 # \SearchAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**SearchAround**](SearchAPI.md#SearchAround) | **Get** /api/{org_id}/{stream_name}/_around | SearchAround
-[**SearchAroundV2**](SearchAPI.md#SearchAroundV2) | **Post** /api/{org_id}/{stream_name}/_around | SearchAroundV2
-[**SearchHistory**](SearchAPI.md#SearchHistory) | **Post** /api/{org_id}/_search_history | Search History
-[**SearchPartition**](SearchAPI.md#SearchPartition) | **Post** /api/{org_id}/_search_partition | SearchStreamPartition
-[**SearchSQL**](SearchAPI.md#SearchSQL) | **Post** /api/{org_id}/_search | SearchStreamData
-[**SearchValues**](SearchAPI.md#SearchValues) | **Get** /api/{org_id}/{stream_name}/_values | SearchTopNValues
-
-
+| Method                                              | HTTP request                                  | Description           |
+| --------------------------------------------------- | --------------------------------------------- | --------------------- |
+| [**SearchAround**](SearchAPI.md#SearchAround)       | **Get** /api/{org_id}/{stream_name}/\_around  | SearchAround          |
+| [**SearchAroundV2**](SearchAPI.md#SearchAroundV2)   | **Post** /api/{org_id}/{stream_name}/\_around | SearchAroundV2        |
+| [**SearchHistory**](SearchAPI.md#SearchHistory)     | **Post** /api/{org_id}/\_search_history       | Search History        |
+| [**SearchPartition**](SearchAPI.md#SearchPartition) | **Post** /api/{org_id}/\_search_partition     | SearchStreamPartition |
+| [**SearchSQL**](SearchAPI.md#SearchSQL)             | **Post** /api/{org_id}/\_search               | SearchStreamData      |
+| [**SearchValues**](SearchAPI.md#SearchValues)       | **Get** /api/{org_id}/{stream_name}/\_values  | SearchTopNValues      |
 
 ## SearchAround
 
@@ -28,7 +26,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -53,26 +51,23 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | stream_name name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | stream_name name                                                            |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSearchAroundRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **key** | **int64** | around key | 
- **size** | **int64** | around size | 
- **regions** | **string** | regions, split by comma | 
- **timeout** | **int64** | timeout, seconds | 
+**key** | **int64** | around key |
+**size** | **int64** | around size |
+**regions** | **string** | regions, split by comma |
+**timeout** | **int64** | timeout, seconds |
 
 ### Return type
 
@@ -91,7 +86,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## SearchAroundV2
 
 > SearchResponse SearchAroundV2(ctx, orgId, streamName).Size(size).Body(body).Regions(regions).Timeout(timeout).Execute()
@@ -107,7 +101,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -132,26 +126,23 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | stream_name name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | stream_name name                                                            |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSearchAroundV2Request struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **size** | **int64** | around size | 
- **body** | **string** | around record data | 
- **regions** | **string** | regions, split by comma | 
- **timeout** | **int64** | timeout, seconds | 
+**size** | **int64** | around size |
+**body** | **string** | around record data |
+**regions** | **string** | regions, split by comma |
+**timeout** | **int64** | timeout, seconds |
 
 ### Return type
 
@@ -170,7 +161,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## SearchHistory
 
 > SearchResponse SearchHistory(ctx, orgId).SearchHistoryRequest(searchHistoryRequest).Execute()
@@ -186,7 +176,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -207,21 +197,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization ID | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization ID                                                             |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSearchHistoryRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **searchHistoryRequest** | [**SearchHistoryRequest**](SearchHistoryRequest.md) | Search history request parameters | 
+**searchHistoryRequest** | [**SearchHistoryRequest**](SearchHistoryRequest.md) | Search history request parameters |
 
 ### Return type
 
@@ -240,7 +228,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## SearchPartition
 
 > SearchResponse SearchPartition(ctx, orgId).SearchRequest(searchRequest).Execute()
@@ -256,7 +243,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -277,21 +264,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSearchPartitionRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **searchRequest** | [**SearchRequest**](SearchRequest.md) | Search query | 
+**searchRequest** | [**SearchRequest**](SearchRequest.md) | Search query |
 
 ### Return type
 
@@ -310,7 +295,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## SearchSQL
 
 > SearchResponse SearchSQL(ctx, orgId).SearchRequest(searchRequest).Execute()
@@ -326,7 +310,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -347,21 +331,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSearchSQLRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **searchRequest** | [**SearchRequest**](SearchRequest.md) | Search query | 
+**searchRequest** | [**SearchRequest**](SearchRequest.md) | Search query |
 
 ### Return type
 
@@ -380,7 +362,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## SearchValues
 
 > SearchResponse SearchValues(ctx, orgId, streamName).Fields(fields).Size(size).StartTime(startTime).EndTime(endTime).Filter(filter).Keyword(keyword).Regions(regions).Timeout(timeout).NoCount(noCount).Execute()
@@ -396,7 +377,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -426,31 +407,28 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | stream_name name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | stream_name name                                                            |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSearchValuesRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **fields** | **string** | fields, split by comma | 
- **size** | **int64** | size | 
- **startTime** | **int64** | start time | 
- **endTime** | **int64** | end time | 
- **filter** | **string** | filter, eg: a&#x3D;b | 
- **keyword** | **string** | keyword, eg: abc | 
- **regions** | **string** | regions, split by comma | 
- **timeout** | **int64** | timeout, seconds | 
- **noCount** | **bool** | no need count, true of false | 
+**fields** | **string** | fields, split by comma |
+**size** | **int64** | size |
+**startTime** | **int64** | start time |
+**endTime** | **int64** | end time |
+**filter** | **string** | filter, eg: a&#x3D;b |
+**keyword** | **string** | keyword, eg: abc |
+**regions** | **string** | regions, split by comma |
+**timeout** | **int64** | timeout, seconds |
+**noCount** | **bool** | no need count, true of false |
 
 ### Return type
 
@@ -468,4 +446,3 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

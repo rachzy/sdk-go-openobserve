@@ -1,22 +1,18 @@
 # \SavedViewsAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**CreateSavedViews**](SavedViewsAPI.md#CreateSavedViews) | **Post** /api/{org_id}/savedviews | 
-[**DeleteSavedViews**](SavedViewsAPI.md#DeleteSavedViews) | **Delete** /api/{org_id}/savedviews/{view_id} | 
-[**GetSavedView**](SavedViewsAPI.md#GetSavedView) | **Get** /api/{org_id}/savedviews/{view_id} | 
-[**ListSavedViews**](SavedViewsAPI.md#ListSavedViews) | **Get** /api/{org_id}/savedviews | 
-[**UpdateSavedViews**](SavedViewsAPI.md#UpdateSavedViews) | **Put** /api/{org_id}/savedviews/{view_id} | 
-
-
+| Method                                                    | HTTP request                                  | Description |
+| --------------------------------------------------------- | --------------------------------------------- | ----------- |
+| [**CreateSavedViews**](SavedViewsAPI.md#CreateSavedViews) | **Post** /api/{org_id}/savedviews             |
+| [**DeleteSavedViews**](SavedViewsAPI.md#DeleteSavedViews) | **Delete** /api/{org_id}/savedviews/{view_id} |
+| [**GetSavedView**](SavedViewsAPI.md#GetSavedView)         | **Get** /api/{org_id}/savedviews/{view_id}    |
+| [**ListSavedViews**](SavedViewsAPI.md#ListSavedViews)     | **Get** /api/{org_id}/savedviews              |
+| [**UpdateSavedViews**](SavedViewsAPI.md#UpdateSavedViews) | **Put** /api/{org_id}/savedviews/{view_id}    |
 
 ## CreateSavedViews
 
 > CreateViewResponse CreateSavedViews(ctx, orgId).CreateViewRequest(createViewRequest).Execute()
-
-
 
 ### Example
 
@@ -27,7 +23,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -48,21 +44,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiCreateSavedViewsRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **createViewRequest** | [**CreateViewRequest**](CreateViewRequest.md) | Create view data | 
+**createViewRequest** | [**CreateViewRequest**](CreateViewRequest.md) | Create view data |
 
 ### Return type
 
@@ -81,12 +75,9 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## DeleteSavedViews
 
 > DeleteViewResponse DeleteSavedViews(ctx, orgId, viewId).Execute()
-
-
 
 ### Example
 
@@ -97,7 +88,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -118,22 +109,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**viewId** | **string** | The view_id to delete | 
+| Name       | Type                | Description                                                                 | Notes |
+| ---------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**    | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**  | **string**          | Organization name                                                           |
+| **viewId** | **string**          | The view_id to delete                                                       |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteSavedViewsRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -152,12 +139,9 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## GetSavedView
 
 > View GetSavedView(ctx, orgId, viewId).Execute()
-
-
 
 ### Example
 
@@ -168,7 +152,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -189,22 +173,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**viewId** | **string** | The view_id which was stored | 
+| Name       | Type                | Description                                                                 | Notes |
+| ---------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**    | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**  | **string**          | Organization name                                                           |
+| **viewId** | **string**          | The view_id which was stored                                                |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetSavedViewRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -223,12 +203,9 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## ListSavedViews
 
 > ViewsWithoutData ListSavedViews(ctx, orgId).Execute()
-
-
 
 ### Example
 
@@ -239,7 +216,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -259,20 +236,17 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiListSavedViewsRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -291,12 +265,9 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## UpdateSavedViews
 
 > View UpdateSavedViews(ctx, orgId, viewId).UpdateViewRequest(updateViewRequest).Execute()
-
-
 
 ### Example
 
@@ -307,7 +278,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -329,23 +300,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**viewId** | **string** | View id to be updated | 
+| Name       | Type                | Description                                                                 | Notes |
+| ---------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**    | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**  | **string**          | Organization name                                                           |
+| **viewId** | **string**          | View id to be updated                                                       |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUpdateSavedViewsRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **updateViewRequest** | [**UpdateViewRequest**](UpdateViewRequest.md) | Update view data | 
+**updateViewRequest** | [**UpdateViewRequest**](UpdateViewRequest.md) | Update view data |
 
 ### Return type
 
@@ -363,4 +331,3 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

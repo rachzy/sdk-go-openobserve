@@ -1,16 +1,14 @@
 # \UsersAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**AddUserToOrg**](UsersAPI.md#AddUserToOrg) | **Post** /api/{org_id}/users/{email_id} | AddUserToOrganization
-[**RemoveUserFromOrg**](UsersAPI.md#RemoveUserFromOrg) | **Delete** /api/{org_id}/users/{email_id} | RemoveUserFromOrganization
-[**UserList**](UsersAPI.md#UserList) | **Get** /api/{org_id}/users | ListUsers
-[**UserSave**](UsersAPI.md#UserSave) | **Post** /api/{org_id}/users | CreateUser
-[**UserUpdate**](UsersAPI.md#UserUpdate) | **Put** /api/{org_id}/users/{email_id} | UpdateUser
-
-
+| Method                                                 | HTTP request                              | Description                |
+| ------------------------------------------------------ | ----------------------------------------- | -------------------------- |
+| [**AddUserToOrg**](UsersAPI.md#AddUserToOrg)           | **Post** /api/{org_id}/users/{email_id}   | AddUserToOrganization      |
+| [**RemoveUserFromOrg**](UsersAPI.md#RemoveUserFromOrg) | **Delete** /api/{org_id}/users/{email_id} | RemoveUserFromOrganization |
+| [**UserList**](UsersAPI.md#UserList)                   | **Get** /api/{org_id}/users               | ListUsers                  |
+| [**UserSave**](UsersAPI.md#UserSave)                   | **Post** /api/{org_id}/users              | CreateUser                 |
+| [**UserUpdate**](UsersAPI.md#UserUpdate)               | **Put** /api/{org_id}/users/{email_id}    | UpdateUser                 |
 
 ## AddUserToOrg
 
@@ -27,7 +25,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -49,23 +47,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**emailId** | **string** | User&#39;s email id | 
+| Name        | Type                | Description                                                                 | Notes |
+| ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**   | **string**          | Organization name                                                           |
+| **emailId** | **string**          | User&#39;s email id                                                         |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiAddUserToOrgRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **userOrgRole** | [**UserOrgRole**](UserOrgRole.md) | User role | 
+**userOrgRole** | [**UserOrgRole**](UserOrgRole.md) | User role |
 
 ### Return type
 
@@ -84,7 +79,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## RemoveUserFromOrg
 
 > HttpResponse RemoveUserFromOrg(ctx, orgId, emailId).Execute()
@@ -100,7 +94,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -121,22 +115,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**emailId** | **string** | User name | 
+| Name        | Type                | Description                                                                 | Notes |
+| ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**   | **string**          | Organization name                                                           |
+| **emailId** | **string**          | User name                                                                   |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiRemoveUserFromOrgRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -155,7 +145,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## UserList
 
 > UserList UserList(ctx, orgId).Execute()
@@ -171,7 +160,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -191,20 +180,17 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUserListRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -223,7 +209,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## UserSave
 
 > HttpResponse UserSave(ctx, orgId).UserRequest(userRequest).Execute()
@@ -239,7 +224,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -260,21 +245,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUserSaveRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **userRequest** | [**UserRequest**](UserRequest.md) | User data | 
+**userRequest** | [**UserRequest**](UserRequest.md) | User data |
 
 ### Return type
 
@@ -293,7 +276,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## UserUpdate
 
 > HttpResponse UserUpdate(ctx, orgId, emailId).UpdateUser(updateUser).Execute()
@@ -309,7 +291,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -331,23 +313,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**emailId** | **string** | User&#39;s email id | 
+| Name        | Type                | Description                                                                 | Notes |
+| ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**   | **string**          | Organization name                                                           |
+| **emailId** | **string**          | User&#39;s email id                                                         |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUserUpdateRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **updateUser** | [**UpdateUser**](UpdateUser.md) | User data | 
+**updateUser** | [**UpdateUser**](UpdateUser.md) | User data |
 
 ### Return type
 
@@ -365,4 +344,3 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

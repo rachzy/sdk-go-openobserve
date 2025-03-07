@@ -1,20 +1,18 @@
 # \OrganizationsAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**CreateOrganizationUserRumIngestToken**](OrganizationsAPI.md#CreateOrganizationUserRumIngestToken) | **Post** /api/{org_id}/rumtoken | CreateRumIngestToken
-[**GetOrganizationSummary**](OrganizationsAPI.md#GetOrganizationSummary) | **Get** /api/{org_id}/summary | GetOrganizationSummary
-[**GetOrganizationUserIngestToken**](OrganizationsAPI.md#GetOrganizationUserIngestToken) | **Get** /api/{org_id}/passcode | GetIngestToken
-[**GetOrganizationUserRumIngestToken**](OrganizationsAPI.md#GetOrganizationUserRumIngestToken) | **Get** /api/{org_id}/rumtoken | GetRumIngestToken
-[**GetUserOrganizations**](OrganizationsAPI.md#GetUserOrganizations) | **Get** /api/organizations | GetOrganizations
-[**OrganizationSettingCreate**](OrganizationsAPI.md#OrganizationSettingCreate) | **Post** /api/{org_id}/settings | Organization specific settings
-[**OrganizationSettingGet**](OrganizationsAPI.md#OrganizationSettingGet) | **Get** /api/{org_id}/settings | Retrieve organization specific settings
-[**UpdateOrganizationUserIngestToken**](OrganizationsAPI.md#UpdateOrganizationUserIngestToken) | **Put** /api/{org_id}/passcode | UpdateIngestToken
-[**UpdateOrganizationUserRumIngestToken**](OrganizationsAPI.md#UpdateOrganizationUserRumIngestToken) | **Put** /api/{org_id}/rumtoken | UpdateRumIngestToken
-
-
+| Method                                                                                               | HTTP request                    | Description                             |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------- | --------------------------------------- |
+| [**CreateOrganizationUserRumIngestToken**](OrganizationsAPI.md#CreateOrganizationUserRumIngestToken) | **Post** /api/{org_id}/rumtoken | CreateRumIngestToken                    |
+| [**GetOrganizationSummary**](OrganizationsAPI.md#GetOrganizationSummary)                             | **Get** /api/{org_id}/summary   | GetOrganizationSummary                  |
+| [**GetOrganizationUserIngestToken**](OrganizationsAPI.md#GetOrganizationUserIngestToken)             | **Get** /api/{org_id}/passcode  | GetIngestToken                          |
+| [**GetOrganizationUserRumIngestToken**](OrganizationsAPI.md#GetOrganizationUserRumIngestToken)       | **Get** /api/{org_id}/rumtoken  | GetRumIngestToken                       |
+| [**GetUserOrganizations**](OrganizationsAPI.md#GetUserOrganizations)                                 | **Get** /api/organizations      | GetOrganizations                        |
+| [**OrganizationSettingCreate**](OrganizationsAPI.md#OrganizationSettingCreate)                       | **Post** /api/{org_id}/settings | Organization specific settings          |
+| [**OrganizationSettingGet**](OrganizationsAPI.md#OrganizationSettingGet)                             | **Get** /api/{org_id}/settings  | Retrieve organization specific settings |
+| [**UpdateOrganizationUserIngestToken**](OrganizationsAPI.md#UpdateOrganizationUserIngestToken)       | **Put** /api/{org_id}/passcode  | UpdateIngestToken                       |
+| [**UpdateOrganizationUserRumIngestToken**](OrganizationsAPI.md#UpdateOrganizationUserRumIngestToken) | **Put** /api/{org_id}/rumtoken  | UpdateRumIngestToken                    |
 
 ## CreateOrganizationUserRumIngestToken
 
@@ -31,7 +29,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -51,20 +49,17 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiCreateOrganizationUserRumIngestTokenRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -83,7 +78,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## GetOrganizationSummary
 
 > OrgSummary GetOrganizationSummary(ctx, orgId).Execute()
@@ -99,7 +93,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -119,20 +113,17 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetOrganizationSummaryRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -151,7 +142,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## GetOrganizationUserIngestToken
 
 > PasscodeResponse GetOrganizationUserIngestToken(ctx, orgId).Execute()
@@ -167,7 +157,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -187,20 +177,17 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetOrganizationUserIngestTokenRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -219,7 +206,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## GetOrganizationUserRumIngestToken
 
 > RumIngestionResponse GetOrganizationUserRumIngestToken(ctx, orgId).Execute()
@@ -235,7 +221,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -255,20 +241,17 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetOrganizationUserRumIngestTokenRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -287,7 +270,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## GetUserOrganizations
 
 > OrganizationResponse GetUserOrganizations(ctx).Execute()
@@ -303,7 +285,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -328,7 +310,6 @@ This endpoint does not need any parameter.
 
 Other parameters are passed through a pointer to a apiGetUserOrganizationsRequest struct via the builder pattern
 
-
 ### Return type
 
 [**OrganizationResponse**](OrganizationResponse.md)
@@ -346,7 +327,6 @@ Other parameters are passed through a pointer to a apiGetUserOrganizationsReques
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## OrganizationSettingCreate
 
 > HttpResponse OrganizationSettingCreate(ctx, orgId).Body(body).Execute()
@@ -362,7 +342,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -383,21 +363,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiOrganizationSettingCreateRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **body** | **OrganizationSettingPayload** | Organization settings | 
+**body** | **OrganizationSettingPayload** | Organization settings |
 
 ### Return type
 
@@ -416,7 +394,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## OrganizationSettingGet
 
 > HttpResponse OrganizationSettingGet(ctx, orgId).Execute()
@@ -432,7 +409,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -452,20 +429,17 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiOrganizationSettingGetRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -484,7 +458,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## UpdateOrganizationUserIngestToken
 
 > PasscodeResponse UpdateOrganizationUserIngestToken(ctx, orgId).Execute()
@@ -500,7 +473,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -520,20 +493,17 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUpdateOrganizationUserIngestTokenRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -552,7 +522,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## UpdateOrganizationUserRumIngestToken
 
 > RumIngestionResponse UpdateOrganizationUserRumIngestToken(ctx, orgId).Execute()
@@ -568,7 +537,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -588,20 +557,17 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUpdateOrganizationUserRumIngestTokenRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -619,4 +585,3 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

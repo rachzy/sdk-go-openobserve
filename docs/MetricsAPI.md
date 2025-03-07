@@ -1,26 +1,24 @@
 # \MetricsAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**MetricsIngestionJson**](MetricsAPI.md#MetricsIngestionJson) | **Post** /api/{org_id}/ingest/metrics/_json | _json ingestion API
-[**PrometheusFormatQuery**](MetricsAPI.md#PrometheusFormatQuery) | **Get** /api/{org_id}/prometheus/api/v1/format_query | prometheus formatting query expressions
-[**PrometheusLabelValues**](MetricsAPI.md#PrometheusLabelValues) | **Get** /api/{org_id}/prometheus/api/v1/label/{label_name}/values | prometheus query label values
-[**PrometheusLabels**](MetricsAPI.md#PrometheusLabels) | **Get** /api/{org_id}/prometheus/api/v1/labels | prometheus getting label names
-[**PrometheusMetadata**](MetricsAPI.md#PrometheusMetadata) | **Get** /api/{org_id}/prometheus/api/v1/metadata | prometheus query metric metadata
-[**PrometheusQuery**](MetricsAPI.md#PrometheusQuery) | **Get** /api/{org_id}/prometheus/api/v1/query | prometheus instant queries
-[**PrometheusRangeQuery**](MetricsAPI.md#PrometheusRangeQuery) | **Get** /api/{org_id}/prometheus/api/v1/query_range | prometheus range queries
-[**PrometheusRemoteWrite**](MetricsAPI.md#PrometheusRemoteWrite) | **Post** /api/{org_id}/prometheus/api/v1/write | prometheus remote-write endpoint for metrics
-[**PrometheusSeries**](MetricsAPI.md#PrometheusSeries) | **Get** /api/{org_id}/prometheus/api/v1/series | prometheus finding series by label matchers
-
-
+| Method                                                           | HTTP request                                                      | Description                                  |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------- |
+| [**MetricsIngestionJson**](MetricsAPI.md#MetricsIngestionJson)   | **Post** /api/{org_id}/ingest/metrics/\_json                      | \_json ingestion API                         |
+| [**PrometheusFormatQuery**](MetricsAPI.md#PrometheusFormatQuery) | **Get** /api/{org_id}/prometheus/api/v1/format_query              | prometheus formatting query expressions      |
+| [**PrometheusLabelValues**](MetricsAPI.md#PrometheusLabelValues) | **Get** /api/{org_id}/prometheus/api/v1/label/{label_name}/values | prometheus query label values                |
+| [**PrometheusLabels**](MetricsAPI.md#PrometheusLabels)           | **Get** /api/{org_id}/prometheus/api/v1/labels                    | prometheus getting label names               |
+| [**PrometheusMetadata**](MetricsAPI.md#PrometheusMetadata)       | **Get** /api/{org_id}/prometheus/api/v1/metadata                  | prometheus query metric metadata             |
+| [**PrometheusQuery**](MetricsAPI.md#PrometheusQuery)             | **Get** /api/{org_id}/prometheus/api/v1/query                     | prometheus instant queries                   |
+| [**PrometheusRangeQuery**](MetricsAPI.md#PrometheusRangeQuery)   | **Get** /api/{org_id}/prometheus/api/v1/query_range               | prometheus range queries                     |
+| [**PrometheusRemoteWrite**](MetricsAPI.md#PrometheusRemoteWrite) | **Post** /api/{org_id}/prometheus/api/v1/write                    | prometheus remote-write endpoint for metrics |
+| [**PrometheusSeries**](MetricsAPI.md#PrometheusSeries)           | **Get** /api/{org_id}/prometheus/api/v1/series                    | prometheus finding series by label matchers  |
 
 ## MetricsIngestionJson
 
 > IngestionResponse MetricsIngestionJson(ctx, orgId).Body(body).Execute()
 
-_json ingestion API
+\_json ingestion API
 
 ### Example
 
@@ -31,7 +29,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -52,21 +50,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiMetricsIngestionJsonRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **body** | **string** | Ingest data (json array) | 
+**body** | **string** | Ingest data (json array) |
 
 ### Return type
 
@@ -85,7 +81,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## PrometheusFormatQuery
 
 > HttpResponse PrometheusFormatQuery(ctx, orgId).Query(query).Execute()
@@ -101,12 +96,12 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	query := "query_example" // string | Prometheus expression query string.
-	orgId := "orgId_example" // string | 
+	orgId := "orgId_example" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -122,21 +117,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** |  | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          |                                                                             |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiPrometheusFormatQueryRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **query** | **string** | Prometheus expression query string. | 
-
+| Name      | Type       | Description                         | Notes |
+| --------- | ---------- | ----------------------------------- | ----- |
+| **query** | **string** | Prometheus expression query string. |
 
 ### Return type
 
@@ -155,7 +147,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## PrometheusLabelValues
 
 > HttpResponse PrometheusLabelValues(ctx, orgId, labelName).Match(match).Start(start).End(end).Execute()
@@ -171,7 +162,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -195,25 +186,22 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**labelName** | **string** | Label name | 
+| Name          | Type                | Description                                                                 | Notes |
+| ------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**       | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**     | **string**          | Organization name                                                           |
+| **labelName** | **string**          | Label name                                                                  |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiPrometheusLabelValuesRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **match** | **string** | Series selector argument that selects the series from which to read the label values | 
- **start** | **string** | &lt;rfc3339 | unix_timestamp&gt;: Start timestamp | 
- **end** | **string** | &lt;rfc3339 | unix_timestamp&gt;: End timestamp | 
+**match** | **string** | Series selector argument that selects the series from which to read the label values |
+**start** | **string** | &lt;rfc3339 | unix_timestamp&gt;: Start timestamp |
+**end** | **string** | &lt;rfc3339 | unix_timestamp&gt;: End timestamp |
 
 ### Return type
 
@@ -232,7 +220,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## PrometheusLabels
 
 > HttpResponse PrometheusLabels(ctx, orgId).Match(match).Start(start).End(end).Execute()
@@ -248,7 +235,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -271,23 +258,21 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiPrometheusLabelsRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **match** | **string** | Series selector argument that selects the series from which to read the label names | 
- **start** | **string** | &lt;rfc3339 | unix_timestamp&gt;: Start timestamp | 
- **end** | **string** | &lt;rfc3339 | unix_timestamp&gt;: End timestamp | 
+**match** | **string** | Series selector argument that selects the series from which to read the label names |
+**start** | **string** | &lt;rfc3339 | unix_timestamp&gt;: Start timestamp |
+**end** | **string** | &lt;rfc3339 | unix_timestamp&gt;: End timestamp |
 
 ### Return type
 
@@ -306,7 +291,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## PrometheusMetadata
 
 > HttpResponse PrometheusMetadata(ctx, orgId).Limit(limit).Metric(metric).Execute()
@@ -322,7 +306,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -344,22 +328,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiPrometheusMetadataRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **limit** | **string** | Maximum number of metrics to return | 
- **metric** | **string** | A metric name to filter metadata for. All metric metadata is retrieved if left empty | 
+**limit** | **string** | Maximum number of metrics to return |
+**metric** | **string** | A metric name to filter metadata for. All metric metadata is retrieved if left empty |
 
 ### Return type
 
@@ -378,7 +360,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## PrometheusQuery
 
 > HttpResponse PrometheusQuery(ctx, orgId).Query(query).Time(time).Timeout(timeout).Execute()
@@ -394,7 +375,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -417,23 +398,21 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiPrometheusQueryRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **query** | **string** | Prometheus expression query string | 
- **time** | **string** | &lt;rfc3339 | unix_timestamp&gt;: Evaluation timestamp. Optional | 
- **timeout** | **string** | Evaluation timeout | 
+**query** | **string** | Prometheus expression query string |
+**time** | **string** | &lt;rfc3339 | unix_timestamp&gt;: Evaluation timestamp. Optional |
+**timeout** | **string** | Evaluation timeout |
 
 ### Return type
 
@@ -452,7 +431,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## PrometheusRangeQuery
 
 > HttpResponse PrometheusRangeQuery(ctx, orgId).Query(query).Start(start).End(end).Step(step).Timeout(timeout).Execute()
@@ -468,7 +446,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -493,25 +471,23 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiPrometheusRangeQueryRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **query** | **string** | Prometheus expression query string | 
- **start** | **string** | &lt;rfc3339 | unix_timestamp&gt;: Start timestamp, inclusive | 
- **end** | **string** | &lt;rfc3339 | unix_timestamp&gt;: End timestamp, inclusive | 
- **step** | **string** | Query resolution step width in duration format or float number of seconds | 
- **timeout** | **string** | Evaluation timeout | 
+**query** | **string** | Prometheus expression query string |
+**start** | **string** | &lt;rfc3339 | unix_timestamp&gt;: Start timestamp, inclusive |
+**end** | **string** | &lt;rfc3339 | unix_timestamp&gt;: End timestamp, inclusive |
+**step** | **string** | Query resolution step width in duration format or float number of seconds |
+**timeout** | **string** | Evaluation timeout |
 
 ### Return type
 
@@ -530,7 +506,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## PrometheusRemoteWrite
 
 > IngestionResponse PrometheusRemoteWrite(ctx, orgId).Body(body).Execute()
@@ -546,7 +521,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -567,21 +542,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiPrometheusRemoteWriteRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **body** | **string** | prometheus WriteRequest | 
+**body** | **string** | prometheus WriteRequest |
 
 ### Return type
 
@@ -600,7 +573,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## PrometheusSeries
 
 > HttpResponse PrometheusSeries(ctx, orgId).Match(match).Start(start).End(end).Execute()
@@ -616,7 +588,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -639,23 +611,21 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiPrometheusSeriesRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **match** | **string** | &lt;series_selector&gt;: Series selector argument that selects the series to return | 
- **start** | **string** | &lt;rfc3339 | unix_timestamp&gt;: Start timestamp | 
- **end** | **string** | &lt;rfc3339 | unix_timestamp&gt;: End timestamp | 
+**match** | **string** | &lt;series_selector&gt;: Series selector argument that selects the series to return |
+**start** | **string** | &lt;rfc3339 | unix_timestamp&gt;: Start timestamp |
+**end** | **string** | &lt;rfc3339 | unix_timestamp&gt;: End timestamp |
 
 ### Return type
 
@@ -673,4 +643,3 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

@@ -1,15 +1,13 @@
 # \SyslogRoutesAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**CreateSyslogRoute**](SyslogRoutesAPI.md#CreateSyslogRoute) | **Post** /api/{org_id}/syslog-routes | CreateSyslogRoute
-[**DeleteSyslogRoute**](SyslogRoutesAPI.md#DeleteSyslogRoute) | **Delete** /api/{org_id}/syslog-routes/{id} | DeleteSyslogRoute
-[**ListSyslogRoutes**](SyslogRoutesAPI.md#ListSyslogRoutes) | **Get** /api/{org_id}/syslog-routes | ListSyslogRoutes
-[**UpdateSyslogRoute**](SyslogRoutesAPI.md#UpdateSyslogRoute) | **Put** /api/{org_id}/syslog-routes/{id} | UpdateSyslogRoute
-
-
+| Method                                                        | HTTP request                                | Description       |
+| ------------------------------------------------------------- | ------------------------------------------- | ----------------- |
+| [**CreateSyslogRoute**](SyslogRoutesAPI.md#CreateSyslogRoute) | **Post** /api/{org_id}/syslog-routes        | CreateSyslogRoute |
+| [**DeleteSyslogRoute**](SyslogRoutesAPI.md#DeleteSyslogRoute) | **Delete** /api/{org_id}/syslog-routes/{id} | DeleteSyslogRoute |
+| [**ListSyslogRoutes**](SyslogRoutesAPI.md#ListSyslogRoutes)   | **Get** /api/{org_id}/syslog-routes         | ListSyslogRoutes  |
+| [**UpdateSyslogRoute**](SyslogRoutesAPI.md#UpdateSyslogRoute) | **Put** /api/{org_id}/syslog-routes/{id}    | UpdateSyslogRoute |
 
 ## CreateSyslogRoute
 
@@ -26,7 +24,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -47,21 +45,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiCreateSyslogRouteRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **syslogRoute** | [**SyslogRoute**](SyslogRoute.md) | SyslogRoute details | 
+**syslogRoute** | [**SyslogRoute**](SyslogRoute.md) | SyslogRoute details |
 
 ### Return type
 
@@ -80,7 +76,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## DeleteSyslogRoute
 
 > HttpResponse DeleteSyslogRoute(ctx, orgId, id).Execute()
@@ -96,7 +91,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -117,22 +112,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**id** | **string** | SyslogRoute Id | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
+| **id**    | **string**          | SyslogRoute Id                                                              |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteSyslogRouteRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -151,7 +142,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## ListSyslogRoutes
 
 > SyslogRoutes ListSyslogRoutes(ctx, orgId).Execute()
@@ -167,7 +157,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -187,20 +177,17 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiListSyslogRoutesRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -219,7 +206,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## UpdateSyslogRoute
 
 > SyslogRoute UpdateSyslogRoute(ctx, orgId, id).SyslogRoute(syslogRoute).Execute()
@@ -235,7 +221,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -257,23 +243,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**id** | **string** | Route ID | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
+| **id**    | **string**          | Route ID                                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUpdateSyslogRouteRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **syslogRoute** | [**SyslogRoute**](SyslogRoute.md) | SyslogRoute details | 
+**syslogRoute** | [**SyslogRoute**](SyslogRoute.md) | SyslogRoute details |
 
 ### Return type
 
@@ -291,4 +274,3 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

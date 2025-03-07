@@ -1,13 +1,11 @@
 # \ShortUrlAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**Retrieve**](ShortUrlAPI.md#Retrieve) | **Get** /short/{org_id}/short/{short_id} | Retrieve the original URL from a short_id
-[**Shorten**](ShortUrlAPI.md#Shorten) | **Post** /api/{org_id}/short | Shorten a URL
-
-
+| Method                                  | HTTP request                             | Description                               |
+| --------------------------------------- | ---------------------------------------- | ----------------------------------------- |
+| [**Retrieve**](ShortUrlAPI.md#Retrieve) | **Get** /short/{org_id}/short/{short_id} | Retrieve the original URL from a short_id |
+| [**Shorten**](ShortUrlAPI.md#Shorten)   | **Post** /api/{org_id}/short             | Shorten a URL                             |
 
 ## Retrieve
 
@@ -24,12 +22,12 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
 	shortId := "ddbffcea3ad44292" // string | The short ID to retrieve the original URL
-	orgId := "orgId_example" // string | 
+	orgId := "orgId_example" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -43,26 +41,22 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**shortId** | **string** | The short ID to retrieve the original URL | 
-**orgId** | **string** |  | 
+| Name        | Type                | Description                                                                 | Notes |
+| ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **shortId** | **string**          | The short ID to retrieve the original URL                                   |
+| **orgId**   | **string**          |                                                                             |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiRetrieveRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
- (empty response body)
+(empty response body)
 
 ### Authorization
 
@@ -76,7 +70,6 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-
 
 ## Shorten
 
@@ -93,11 +86,11 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
-	orgId := "orgId_example" // string | 
+	orgId := "orgId_example" // string |
 	shortenUrlRequest := *openapiclient.NewShortenUrlRequest("OriginalUrl_example") // ShortenUrlRequest | The original URL to shorten
 
 	configuration := openapiclient.NewConfiguration()
@@ -114,21 +107,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** |  | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          |                                                                             |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiShortenRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **shortenUrlRequest** | [**ShortenUrlRequest**](ShortenUrlRequest.md) | The original URL to shorten | 
+**shortenUrlRequest** | [**ShortenUrlRequest**](ShortenUrlRequest.md) | The original URL to shorten |
 
 ### Return type
 
@@ -146,4 +137,3 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

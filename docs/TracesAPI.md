@@ -1,13 +1,11 @@
 # \TracesAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetLatestTraces**](TracesAPI.md#GetLatestTraces) | **Get** /api/{org_id}/{stream_name}/traces/latest | GetLatestTraces
-[**PostTraces**](TracesAPI.md#PostTraces) | **Post** /api/{org_id}/traces | TracesIngest
-
-
+| Method                                              | HTTP request                                      | Description     |
+| --------------------------------------------------- | ------------------------------------------------- | --------------- |
+| [**GetLatestTraces**](TracesAPI.md#GetLatestTraces) | **Get** /api/{org_id}/{stream_name}/traces/latest | GetLatestTraces |
+| [**PostTraces**](TracesAPI.md#PostTraces)           | **Post** /api/{org_id}/traces                     | TracesIngest    |
 
 ## GetLatestTraces
 
@@ -24,7 +22,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -51,28 +49,25 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetLatestTracesRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **from** | **int64** | from | 
- **size** | **int64** | size | 
- **startTime** | **int64** | start time | 
- **endTime** | **int64** | end time | 
- **filter** | **string** | filter, eg: a&#x3D;b AND c&#x3D;d | 
- **timeout** | **int64** | timeout, seconds | 
+**from** | **int64** | from |
+**size** | **int64** | size |
+**startTime** | **int64** | start time |
+**endTime** | **int64** | end time |
+**filter** | **string** | filter, eg: a&#x3D;b AND c&#x3D;d |
+**timeout** | **int64** | timeout, seconds |
 
 ### Return type
 
@@ -91,7 +86,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## PostTraces
 
 > IngestionResponse PostTraces(ctx, orgId).Body(body).Execute()
@@ -107,11 +101,11 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
-	orgId := "orgId_example" // string | 
+	orgId := "orgId_example" // string |
 	body := "body_example" // string | ExportTraceServiceRequest
 
 	configuration := openapiclient.NewConfiguration()
@@ -128,21 +122,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** |  | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          |                                                                             |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiPostTracesRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **body** | **string** | ExportTraceServiceRequest | 
+**body** | **string** | ExportTraceServiceRequest |
 
 ### Return type
 
@@ -160,4 +152,3 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

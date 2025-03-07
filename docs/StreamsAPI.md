@@ -1,21 +1,19 @@
 # \StreamsAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**StreamDelete**](StreamsAPI.md#StreamDelete) | **Delete** /api/{org_id}/streams/{stream_name} | DeleteStream
-[**StreamDeleteFields**](StreamsAPI.md#StreamDeleteFields) | **Put** /api/{org_id}/streams/{stream_name}/delete_fields | DeleteStreamFields
-[**StreamList**](StreamsAPI.md#StreamList) | **Get** /api/{org_id}/streams | ListStreams
-[**StreamSchema**](StreamsAPI.md#StreamSchema) | **Get** /api/{org_id}/streams/{stream_name}/schema | GetSchema
-[**StreamSettings**](StreamsAPI.md#StreamSettings) | **Post** /api/{org_id}/streams/{stream_name}/settings | CreateStreamSettings
-[**UpdateStreamSettings**](StreamsAPI.md#UpdateStreamSettings) | **Put** /api/{org_id}/streams/{stream_name}/settings | UpdateStreamSettings
-
-
+| Method                                                         | HTTP request                                              | Description          |
+| -------------------------------------------------------------- | --------------------------------------------------------- | -------------------- |
+| [**StreamDelete**](StreamsAPI.md#StreamDelete)                 | **Delete** /api/{org_id}/streams/{stream_name}            | DeleteStream         |
+| [**StreamDeleteFields**](StreamsAPI.md#StreamDeleteFields)     | **Put** /api/{org_id}/streams/{stream_name}/delete_fields | DeleteStreamFields   |
+| [**StreamList**](StreamsAPI.md#StreamList)                     | **Get** /api/{org_id}/streams                             | ListStreams          |
+| [**StreamSchema**](StreamsAPI.md#StreamSchema)                 | **Get** /api/{org_id}/streams/{stream_name}/schema        | GetSchema            |
+| [**StreamSettings**](StreamsAPI.md#StreamSettings)             | **Post** /api/{org_id}/streams/{stream_name}/settings     | CreateStreamSettings |
+| [**UpdateStreamSettings**](StreamsAPI.md#UpdateStreamSettings) | **Put** /api/{org_id}/streams/{stream_name}/settings      | UpdateStreamSettings |
 
 ## StreamDelete
 
-> HttpResponse StreamDelete(ctx, orgId, streamName).Type_(type_).Execute()
+> HttpResponse StreamDelete(ctx, orgId, streamName).Type*(type*).Execute()
 
 DeleteStream
 
@@ -28,7 +26,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -50,23 +48,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiStreamDeleteRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **type_** | **string** | Stream type | 
+**type\_** | **string** | Stream type |
 
 ### Return type
 
@@ -85,10 +80,9 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## StreamDeleteFields
 
-> HttpResponse StreamDeleteFields(ctx, orgId, streamName).Type_(type_).StreamDeleteFields(streamDeleteFields).Execute()
+> HttpResponse StreamDeleteFields(ctx, orgId, streamName).Type*(type*).StreamDeleteFields(streamDeleteFields).Execute()
 
 DeleteStreamFields
 
@@ -101,7 +95,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -124,24 +118,21 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiStreamDeleteFieldsRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **type_** | **string** | Stream type | 
- **streamDeleteFields** | [**StreamDeleteFields**](StreamDeleteFields.md) | Stream delete fields | 
+**type\_** | **string** | Stream type |
+**streamDeleteFields** | [**StreamDeleteFields**](StreamDeleteFields.md) | Stream delete fields |
 
 ### Return type
 
@@ -160,10 +151,9 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## StreamList
 
-> ListStream StreamList(ctx, orgId).Type_(type_).Keyword(keyword).Offset(offset).Limit(limit).Sort(sort).Execute()
+> ListStream StreamList(ctx, orgId).Type*(type*).Keyword(keyword).Offset(offset).Limit(limit).Sort(sort).Execute()
 
 ListStreams
 
@@ -176,7 +166,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -201,25 +191,23 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiStreamListRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **type_** | **string** | Stream type | 
- **keyword** | **string** | Keyword | 
- **offset** | **int32** | Offset | 
- **limit** | **int32** | Limit | 
- **sort** | **string** | Sort | 
+**type\_** | **string** | Stream type |
+**keyword** | **string** | Keyword |
+**offset** | **int32** | Offset |
+**limit** | **int32** | Limit |
+**sort** | **string** | Sort |
 
 ### Return type
 
@@ -238,10 +226,9 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## StreamSchema
 
-> Stream StreamSchema(ctx, orgId, streamName).Type_(type_).Keyword(keyword).Offset(offset).Limit(limit).Execute()
+> Stream StreamSchema(ctx, orgId, streamName).Type*(type*).Keyword(keyword).Offset(offset).Limit(limit).Execute()
 
 GetSchema
 
@@ -254,7 +241,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -279,26 +266,23 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiStreamSchemaRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **type_** | **string** | Stream type | 
- **keyword** | **string** | Keyword | 
- **offset** | **int32** | Offset | 
- **limit** | **int32** | Limit | 
+**type\_** | **string** | Stream type |
+**keyword** | **string** | Keyword |
+**offset** | **int32** | Offset |
+**limit** | **int32** | Limit |
 
 ### Return type
 
@@ -317,10 +301,9 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## StreamSettings
 
-> HttpResponse StreamSettings(ctx, orgId, streamName).Type_(type_).StreamSettings(streamSettings).Execute()
+> HttpResponse StreamSettings(ctx, orgId, streamName).Type*(type*).StreamSettings(streamSettings).Execute()
 
 CreateStreamSettings
 
@@ -333,7 +316,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -356,24 +339,21 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiStreamSettingsRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **type_** | **string** | Stream type | 
- **streamSettings** | [**StreamSettings**](StreamSettings.md) | Stream settings | 
+**type\_** | **string** | Stream type |
+**streamSettings** | [**StreamSettings**](StreamSettings.md) | Stream settings |
 
 ### Return type
 
@@ -392,10 +372,9 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## UpdateStreamSettings
 
-> HttpResponse UpdateStreamSettings(ctx, orgId, streamName).Type_(type_).UpdateStreamSettings(updateStreamSettings).Execute()
+> HttpResponse UpdateStreamSettings(ctx, orgId, streamName).Type*(type*).UpdateStreamSettings(updateStreamSettings).Execute()
 
 UpdateStreamSettings
 
@@ -408,7 +387,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -431,24 +410,21 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUpdateStreamSettingsRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **type_** | **string** | Stream type | 
- **updateStreamSettings** | [**UpdateStreamSettings**](UpdateStreamSettings.md) | Stream settings | 
+**type\_** | **string** | Stream type |
+**updateStreamSettings** | [**UpdateStreamSettings**](UpdateStreamSettings.md) | Stream settings |
 
 ### Return type
 
@@ -466,4 +442,3 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

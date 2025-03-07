@@ -1,16 +1,14 @@
 # \TemplatesAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**CreateTemplate**](TemplatesAPI.md#CreateTemplate) | **Post** /api/{org_id}/alerts/templates | CreateTemplate
-[**DeleteAlertTemplate**](TemplatesAPI.md#DeleteAlertTemplate) | **Delete** /api/{org_id}/alerts/templates/{template_name} | DeleteTemplate
-[**GetTemplate**](TemplatesAPI.md#GetTemplate) | **Get** /api/{org_id}/alerts/templates/{template_name} | GetTemplateByName
-[**ListTemplates**](TemplatesAPI.md#ListTemplates) | **Get** /api/{org_id}/alerts/templates | ListTemplates
-[**UpdateTemplate**](TemplatesAPI.md#UpdateTemplate) | **Put** /api/{org_id}/alerts/templates/{template_name} | UpdateTemplate
-
-
+| Method                                                         | HTTP request                                              | Description       |
+| -------------------------------------------------------------- | --------------------------------------------------------- | ----------------- |
+| [**CreateTemplate**](TemplatesAPI.md#CreateTemplate)           | **Post** /api/{org_id}/alerts/templates                   | CreateTemplate    |
+| [**DeleteAlertTemplate**](TemplatesAPI.md#DeleteAlertTemplate) | **Delete** /api/{org_id}/alerts/templates/{template_name} | DeleteTemplate    |
+| [**GetTemplate**](TemplatesAPI.md#GetTemplate)                 | **Get** /api/{org_id}/alerts/templates/{template_name}    | GetTemplateByName |
+| [**ListTemplates**](TemplatesAPI.md#ListTemplates)             | **Get** /api/{org_id}/alerts/templates                    | ListTemplates     |
+| [**UpdateTemplate**](TemplatesAPI.md#UpdateTemplate)           | **Put** /api/{org_id}/alerts/templates/{template_name}    | UpdateTemplate    |
 
 ## CreateTemplate
 
@@ -27,7 +25,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -48,21 +46,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiCreateTemplateRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **template** | [**Template**](Template.md) | Template data | 
+**template** | [**Template**](Template.md) | Template data |
 
 ### Return type
 
@@ -81,7 +77,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## DeleteAlertTemplate
 
 > HttpResponse DeleteAlertTemplate(ctx, orgId, templateName).Execute()
@@ -97,7 +92,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -118,22 +113,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**templateName** | **string** | Template name | 
+| Name             | Type                | Description                                                                 | Notes |
+| ---------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**          | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**        | **string**          | Organization name                                                           |
+| **templateName** | **string**          | Template name                                                               |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteAlertTemplateRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -152,7 +143,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## GetTemplate
 
 > Template GetTemplate(ctx, orgId, templateName).Execute()
@@ -168,7 +158,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -189,22 +179,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**templateName** | **string** | Template name | 
+| Name             | Type                | Description                                                                 | Notes |
+| ---------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**          | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**        | **string**          | Organization name                                                           |
+| **templateName** | **string**          | Template name                                                               |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetTemplateRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -223,7 +209,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## ListTemplates
 
 > []Template ListTemplates(ctx, orgId).Execute()
@@ -239,7 +224,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -259,20 +244,17 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiListTemplatesRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -291,7 +273,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## UpdateTemplate
 
 > HttpResponse UpdateTemplate(ctx, orgId, templateName).Template(template).Execute()
@@ -307,7 +288,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -329,23 +310,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**templateName** | **string** | Template name | 
+| Name             | Type                | Description                                                                 | Notes |
+| ---------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**          | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**        | **string**          | Organization name                                                           |
+| **templateName** | **string**          | Template name                                                               |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUpdateTemplateRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **template** | [**Template**](Template.md) | Template data | 
+**template** | [**Template**](Template.md) | Template data |
 
 ### Return type
 
@@ -363,4 +341,3 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

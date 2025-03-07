@@ -1,20 +1,18 @@
 # \LogsAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**LogsIngestionBulk**](LogsAPI.md#LogsIngestionBulk) | **Post** /api/{org_id}/_bulk | _bulk ES compatible ingestion API
-[**LogsIngestionJson**](LogsAPI.md#LogsIngestionJson) | **Post** /api/{org_id}/{stream_name}/_json | _json ingestion API
-[**LogsIngestionMulti**](LogsAPI.md#LogsIngestionMulti) | **Post** /api/{org_id}/{stream_name}/_multi | _multi ingestion API
-
-
+| Method                                                  | HTTP request                                 | Description                        |
+| ------------------------------------------------------- | -------------------------------------------- | ---------------------------------- |
+| [**LogsIngestionBulk**](LogsAPI.md#LogsIngestionBulk)   | **Post** /api/{org_id}/\_bulk                | \_bulk ES compatible ingestion API |
+| [**LogsIngestionJson**](LogsAPI.md#LogsIngestionJson)   | **Post** /api/{org_id}/{stream_name}/\_json  | \_json ingestion API               |
+| [**LogsIngestionMulti**](LogsAPI.md#LogsIngestionMulti) | **Post** /api/{org_id}/{stream_name}/\_multi | \_multi ingestion API              |
 
 ## LogsIngestionBulk
 
 > BulkResponse LogsIngestionBulk(ctx, orgId).Body(body).Execute()
 
-_bulk ES compatible ingestion API
+\_bulk ES compatible ingestion API
 
 ### Example
 
@@ -25,7 +23,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -46,21 +44,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiLogsIngestionBulkRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **body** | **string** | Ingest data (ndjson) | 
+**body** | **string** | Ingest data (ndjson) |
 
 ### Return type
 
@@ -79,12 +75,11 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## LogsIngestionJson
 
 > IngestionResponse LogsIngestionJson(ctx, orgId, streamName).Body(body).Execute()
 
-_json ingestion API
+\_json ingestion API
 
 ### Example
 
@@ -95,7 +90,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -117,23 +112,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiLogsIngestionJsonRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **body** | **string** | Ingest data (json array) | 
+**body** | **string** | Ingest data (json array) |
 
 ### Return type
 
@@ -152,12 +144,11 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## LogsIngestionMulti
 
 > IngestionResponse LogsIngestionMulti(ctx, orgId, streamName).Body(body).Execute()
 
-_multi ingestion API
+\_multi ingestion API
 
 ### Example
 
@@ -168,7 +159,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -190,23 +181,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiLogsIngestionMultiRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **body** | **string** | Ingest data (multiple line json) | 
+**body** | **string** | Ingest data (multiple line json) |
 
 ### Return type
 
@@ -224,4 +212,3 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

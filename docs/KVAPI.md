@@ -1,15 +1,13 @@
 # \KVAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetKVValue**](KVAPI.md#GetKVValue) | **Get** /api/{org_id}/kv/{key} | GetValue
-[**ListKVKeys**](KVAPI.md#ListKVKeys) | **Get** /api/{org_id}/kv | ListKeys
-[**RemoveKVValue**](KVAPI.md#RemoveKVValue) | **Delete** /api/{org_id}/kv/{key} | RemoveValue
-[**SetKVValue**](KVAPI.md#SetKVValue) | **Post** /api/{org_id}/kv/{key} | SetValue
-
-
+| Method                                      | HTTP request                      | Description |
+| ------------------------------------------- | --------------------------------- | ----------- |
+| [**GetKVValue**](KVAPI.md#GetKVValue)       | **Get** /api/{org_id}/kv/{key}    | GetValue    |
+| [**ListKVKeys**](KVAPI.md#ListKVKeys)       | **Get** /api/{org_id}/kv          | ListKeys    |
+| [**RemoveKVValue**](KVAPI.md#RemoveKVValue) | **Delete** /api/{org_id}/kv/{key} | RemoveValue |
+| [**SetKVValue**](KVAPI.md#SetKVValue)       | **Post** /api/{org_id}/kv/{key}   | SetValue    |
 
 ## GetKVValue
 
@@ -26,7 +24,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -47,22 +45,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**key** | **string** | Key name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
+| **key**   | **string**          | Key name                                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetKVValueRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -81,7 +75,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## ListKVKeys
 
 > []string ListKVKeys(ctx, orgId).Prefix(prefix).Execute()
@@ -97,7 +90,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -118,21 +111,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiListKVKeysRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **prefix** | **string** | Key prefix | 
+**prefix** | **string** | Key prefix |
 
 ### Return type
 
@@ -151,7 +142,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## RemoveKVValue
 
 > string RemoveKVValue(ctx, orgId, key).Execute()
@@ -167,7 +157,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -188,22 +178,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**key** | **string** | Key name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
+| **key**   | **string**          | Key name                                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiRemoveKVValueRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -222,7 +208,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## SetKVValue
 
 > string SetKVValue(ctx, orgId, key).Body(body).Execute()
@@ -238,7 +223,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -260,23 +245,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**key** | **string** | Key name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
+| **key**   | **string**          | Key name                                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSetKVValueRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **body** | **string** | Value of the key | 
+**body** | **string** | Value of the key |
 
 ### Return type
 
@@ -294,4 +276,3 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

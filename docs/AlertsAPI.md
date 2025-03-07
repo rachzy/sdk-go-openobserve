@@ -1,32 +1,30 @@
 # \AlertsAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**CreateAlert**](AlertsAPI.md#CreateAlert) | **Post** /api/v2/{org_id}/alerts | CreateAlert
-[**CreateDestination**](AlertsAPI.md#CreateDestination) | **Post** /api/{org_id}/alerts/destinations | CreateDestination
-[**DeleteAlert**](AlertsAPI.md#DeleteAlert) | **Delete** /api/v2/{org_id}/alerts/{alert_id} | DeleteAlert
-[**DeleteAlertDestination**](AlertsAPI.md#DeleteAlertDestination) | **Delete** /api/{org_id}/alerts/destinations/{destination_name} | DeleteDestination
-[**DeleteAlert_0**](AlertsAPI.md#DeleteAlert_0) | **Delete** /api/{org_id}/{stream_name}/alerts/{alert_name} | DeleteAlert
-[**EnableAlert**](AlertsAPI.md#EnableAlert) | **Patch** /api/v2/{org_id}/alerts/{alert_id}/enable | EnableAlert
-[**EnableAlert_0**](AlertsAPI.md#EnableAlert_0) | **Put** /api/{org_id}/{stream_name}/alerts/{alert_name}/enable | EnableAlert
-[**GetAlert**](AlertsAPI.md#GetAlert) | **Get** /api/v2/{org_id}/alerts/{alert_id} | GetAlert
-[**GetAlert_0**](AlertsAPI.md#GetAlert_0) | **Get** /api/{org_id}/{stream_name}/alerts/{alert_name} | GetAlertByName
-[**GetDestination**](AlertsAPI.md#GetDestination) | **Get** /api/{org_id}/alerts/destinations/{destination_name} | GetDestination
-[**ListAlerts**](AlertsAPI.md#ListAlerts) | **Get** /api/v2/{org_id}/alerts | ListAlerts
-[**ListAlerts_0**](AlertsAPI.md#ListAlerts_0) | **Get** /api/{org_id}/alerts | ListAlerts
-[**ListDestinations**](AlertsAPI.md#ListDestinations) | **Get** /api/{org_id}/alerts/destinations | ListDestinations
-[**ListStreamAlerts**](AlertsAPI.md#ListStreamAlerts) | **Get** /api/{org_id}/{stream_name}/alerts | ListStreamAlerts
-[**MoveAlerts**](AlertsAPI.md#MoveAlerts) | **Patch** /api/v2/{org_id}/alerts/move | MoveAlerts
-[**SaveAlert**](AlertsAPI.md#SaveAlert) | **Post** /api/{org_id}/{stream_name}/alerts | CreateAlert
-[**TriggerAlert**](AlertsAPI.md#TriggerAlert) | **Patch** /api/v2/{org_id}/alerts/{alert_id}/trigger | TriggerAlert
-[**TriggerAlert_0**](AlertsAPI.md#TriggerAlert_0) | **Put** /api/{org_id}/{stream_name}/alerts/{alert_name}/trigger | TriggerAlert
-[**UpdateAlert**](AlertsAPI.md#UpdateAlert) | **Put** /api/v2/{org_id}/alerts/{alert_id} | UpdateAlert
-[**UpdateAlert_0**](AlertsAPI.md#UpdateAlert_0) | **Put** /api/{org_id}/{stream_name}/alerts/{alert_name} | UpdateAlert
-[**UpdateDestination**](AlertsAPI.md#UpdateDestination) | **Put** /api/{org_id}/alerts/destinations/{destination_name} | UpdateDestination
-
-
+| Method                                                            | HTTP request                                                    | Description       |
+| ----------------------------------------------------------------- | --------------------------------------------------------------- | ----------------- |
+| [**CreateAlert**](AlertsAPI.md#CreateAlert)                       | **Post** /api/v2/{org_id}/alerts                                | CreateAlert       |
+| [**CreateDestination**](AlertsAPI.md#CreateDestination)           | **Post** /api/{org_id}/alerts/destinations                      | CreateDestination |
+| [**DeleteAlert**](AlertsAPI.md#DeleteAlert)                       | **Delete** /api/v2/{org_id}/alerts/{alert_id}                   | DeleteAlert       |
+| [**DeleteAlertDestination**](AlertsAPI.md#DeleteAlertDestination) | **Delete** /api/{org_id}/alerts/destinations/{destination_name} | DeleteDestination |
+| [**DeleteAlert_0**](AlertsAPI.md#DeleteAlert_0)                   | **Delete** /api/{org_id}/{stream_name}/alerts/{alert_name}      | DeleteAlert       |
+| [**EnableAlert**](AlertsAPI.md#EnableAlert)                       | **Patch** /api/v2/{org_id}/alerts/{alert_id}/enable             | EnableAlert       |
+| [**EnableAlert_0**](AlertsAPI.md#EnableAlert_0)                   | **Put** /api/{org_id}/{stream_name}/alerts/{alert_name}/enable  | EnableAlert       |
+| [**GetAlert**](AlertsAPI.md#GetAlert)                             | **Get** /api/v2/{org_id}/alerts/{alert_id}                      | GetAlert          |
+| [**GetAlert_0**](AlertsAPI.md#GetAlert_0)                         | **Get** /api/{org_id}/{stream_name}/alerts/{alert_name}         | GetAlertByName    |
+| [**GetDestination**](AlertsAPI.md#GetDestination)                 | **Get** /api/{org_id}/alerts/destinations/{destination_name}    | GetDestination    |
+| [**ListAlerts**](AlertsAPI.md#ListAlerts)                         | **Get** /api/v2/{org_id}/alerts                                 | ListAlerts        |
+| [**ListAlerts_0**](AlertsAPI.md#ListAlerts_0)                     | **Get** /api/{org_id}/alerts                                    | ListAlerts        |
+| [**ListDestinations**](AlertsAPI.md#ListDestinations)             | **Get** /api/{org_id}/alerts/destinations                       | ListDestinations  |
+| [**ListStreamAlerts**](AlertsAPI.md#ListStreamAlerts)             | **Get** /api/{org_id}/{stream_name}/alerts                      | ListStreamAlerts  |
+| [**MoveAlerts**](AlertsAPI.md#MoveAlerts)                         | **Patch** /api/v2/{org_id}/alerts/move                          | MoveAlerts        |
+| [**SaveAlert**](AlertsAPI.md#SaveAlert)                           | **Post** /api/{org_id}/{stream_name}/alerts                     | CreateAlert       |
+| [**TriggerAlert**](AlertsAPI.md#TriggerAlert)                     | **Patch** /api/v2/{org_id}/alerts/{alert_id}/trigger            | TriggerAlert      |
+| [**TriggerAlert_0**](AlertsAPI.md#TriggerAlert_0)                 | **Put** /api/{org_id}/{stream_name}/alerts/{alert_name}/trigger | TriggerAlert      |
+| [**UpdateAlert**](AlertsAPI.md#UpdateAlert)                       | **Put** /api/v2/{org_id}/alerts/{alert_id}                      | UpdateAlert       |
+| [**UpdateAlert_0**](AlertsAPI.md#UpdateAlert_0)                   | **Put** /api/{org_id}/{stream_name}/alerts/{alert_name}         | UpdateAlert       |
+| [**UpdateDestination**](AlertsAPI.md#UpdateDestination)           | **Put** /api/{org_id}/alerts/destinations/{destination_name}    | UpdateDestination |
 
 ## CreateAlert
 
@@ -43,7 +41,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -64,21 +62,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiCreateAlertRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **createAlertRequestBody** | [**CreateAlertRequestBody**](CreateAlertRequestBody.md) | Alert data | 
+**createAlertRequestBody** | [**CreateAlertRequestBody**](CreateAlertRequestBody.md) | Alert data |
 
 ### Return type
 
@@ -97,7 +93,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## CreateDestination
 
 > HttpResponse CreateDestination(ctx, orgId).Destination(destination).Execute()
@@ -113,7 +108,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -134,21 +129,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiCreateDestinationRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **destination** | [**Destination**](Destination.md) | Destination data | 
+**destination** | [**Destination**](Destination.md) | Destination data |
 
 ### Return type
 
@@ -167,7 +160,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## DeleteAlert
 
 > HttpResponse DeleteAlert(ctx, orgId, alertId).Execute()
@@ -183,7 +175,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -204,22 +196,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**alertId** | [**Ksuid**](.md) | Alert ID | 
+| Name        | Type                | Description                                                                 | Notes |
+| ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**   | **string**          | Organization name                                                           |
+| **alertId** | [**Ksuid**](.md)    | Alert ID                                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteAlertRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -238,7 +226,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## DeleteAlertDestination
 
 > HttpResponse DeleteAlertDestination(ctx, orgId, destinationName).Execute()
@@ -254,7 +241,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -275,22 +262,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**destinationName** | **string** | Destination name | 
+| Name                | Type                | Description                                                                 | Notes |
+| ------------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**             | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**           | **string**          | Organization name                                                           |
+| **destinationName** | **string**          | Destination name                                                            |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteAlertDestinationRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -309,7 +292,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## DeleteAlert_0
 
 > HttpResponse DeleteAlert_0(ctx, orgId, streamName, alertName).Execute()
@@ -325,7 +307,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -347,24 +329,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
-**alertName** | **string** | Alert name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
+| **alertName**  | **string**          | Alert name                                                                  |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteAlert_1Request struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -383,7 +360,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## EnableAlert
 
 > HttpResponse EnableAlert(ctx, orgId, alertId).Value(value).Execute()
@@ -399,7 +375,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -421,23 +397,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**alertId** | [**Ksuid**](.md) | Alert ID | 
+| Name        | Type                | Description                                                                 | Notes |
+| ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**   | **string**          | Organization name                                                           |
+| **alertId** | [**Ksuid**](.md)    | Alert ID                                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiEnableAlertRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **value** | **bool** | Set to &#x60;true&#x60; to enable the alert or &#x60;false&#x60; to disable the alert. | 
+**value** | **bool** | Set to &#x60;true&#x60; to enable the alert or &#x60;false&#x60; to disable the alert. |
 
 ### Return type
 
@@ -456,7 +429,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## EnableAlert_0
 
 > HttpResponse EnableAlert_0(ctx, orgId, streamName, alertName).Value(value).Execute()
@@ -472,7 +444,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -495,25 +467,21 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
-**alertName** | **string** | Alert name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
+| **alertName**  | **string**          | Alert name                                                                  |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiEnableAlert_2Request struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-
- **value** | **bool** | Enable or disable alert | 
+**value** | **bool** | Enable or disable alert |
 
 ### Return type
 
@@ -532,7 +500,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## GetAlert
 
 > Alert GetAlert(ctx, orgId, alertId).Execute()
@@ -548,7 +515,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -569,22 +536,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**alertId** | [**Ksuid**](.md) | Alert ID | 
+| Name        | Type                | Description                                                                 | Notes |
+| ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**   | **string**          | Organization name                                                           |
+| **alertId** | [**Ksuid**](.md)    | Alert ID                                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetAlertRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -603,7 +566,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## GetAlert_0
 
 > Alert GetAlert_0(ctx, orgId, streamName, alertName).Execute()
@@ -619,7 +581,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -641,24 +603,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
-**alertName** | **string** | Alert name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
+| **alertName**  | **string**          | Alert name                                                                  |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetAlert_3Request struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -677,7 +634,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## GetDestination
 
 > Destination GetDestination(ctx, orgId, destinationName).Execute()
@@ -693,7 +649,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -714,22 +670,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**destinationName** | **string** | Destination name | 
+| Name                | Type                | Description                                                                 | Notes |
+| ------------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**             | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**           | **string**          | Organization name                                                           |
+| **destinationName** | **string**          | Destination name                                                            |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetDestinationRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -748,7 +700,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## ListAlerts
 
 > ListAlertsResponseBody ListAlerts(ctx, orgId).Folder(folder).StreamType(streamType).StreamName(streamName).AlertNameSubstring(alertNameSubstring).Owner(owner).Enabled(enabled).PageSize(pageSize).PageIdx(pageIdx).Execute()
@@ -764,7 +715,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -792,28 +743,26 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiListAlertsRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **folder** | **string** | Optional folder ID filter parameter. | 
- **streamType** | [**StreamType**](StreamType.md) | Optional stream type filter parameter. | 
- **streamName** | **string** | Optional stream name filter parameter.  This parameter is only used if &#x60;stream_type&#x60; is also provided. | 
- **alertNameSubstring** | **string** | Optional case-insensitive name substring filter parameter. | 
- **owner** | **string** | Optional owner user filter parameter. | 
- **enabled** | **bool** | Optional enabled filter parameter. | 
- **pageSize** | **int64** | The optional number of alerts to retrieve. If not set then all alerts that match the query parameters will be returned. | 
- **pageIdx** | **int64** | The optional page index. If not set then defaults to &#x60;0&#x60;.  This parameter is only used if &#x60;page_size&#x60; is also set. | 
+**folder** | **string** | Optional folder ID filter parameter. |
+**streamType** | [**StreamType**](StreamType.md) | Optional stream type filter parameter. |
+**streamName** | **string** | Optional stream name filter parameter. This parameter is only used if &#x60;stream_type&#x60; is also provided. |
+**alertNameSubstring** | **string** | Optional case-insensitive name substring filter parameter. |
+**owner** | **string** | Optional owner user filter parameter. |
+**enabled** | **bool** | Optional enabled filter parameter. |
+**pageSize** | **int64** | The optional number of alerts to retrieve. If not set then all alerts that match the query parameters will be returned. |
+**pageIdx** | **int64** | The optional page index. If not set then defaults to &#x60;0&#x60;. This parameter is only used if &#x60;page_size&#x60; is also set. |
 
 ### Return type
 
@@ -832,7 +781,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## ListAlerts_0
 
 > HttpResponse ListAlerts_0(ctx, orgId).Execute()
@@ -848,7 +796,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -868,20 +816,17 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiListAlerts_4Request struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -900,7 +845,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## ListDestinations
 
 > []Destination ListDestinations(ctx, orgId).Module(module).Execute()
@@ -916,7 +860,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -937,21 +881,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiListDestinationsRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **module** | **string** | Destination module filter, none, alert, or pipeline | 
+**module** | **string** | Destination module filter, none, alert, or pipeline |
 
 ### Return type
 
@@ -970,7 +912,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## ListStreamAlerts
 
 > HttpResponse ListStreamAlerts(ctx, orgId, streamName).Execute()
@@ -986,7 +927,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -1007,22 +948,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiListStreamAlertsRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -1041,7 +978,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## MoveAlerts
 
 > HttpResponse MoveAlerts(ctx, orgId).MoveAlertsRequestBody(moveAlertsRequestBody).Execute()
@@ -1057,7 +993,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -1078,21 +1014,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
+| Name      | Type                | Description                                                                 | Notes |
+| --------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**   | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId** | **string**          | Organization name                                                           |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiMoveAlertsRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **moveAlertsRequestBody** | [**MoveAlertsRequestBody**](MoveAlertsRequestBody.md) | Identifies alerts and the destination folder | 
+**moveAlertsRequestBody** | [**MoveAlertsRequestBody**](MoveAlertsRequestBody.md) | Identifies alerts and the destination folder |
 
 ### Return type
 
@@ -1111,7 +1045,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## SaveAlert
 
 > HttpResponse SaveAlert(ctx, orgId, streamName).Alert(alert).Execute()
@@ -1127,7 +1060,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -1149,23 +1082,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSaveAlertRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **alert** | [**Alert**](Alert.md) | Alert data | 
+**alert** | [**Alert**](Alert.md) | Alert data |
 
 ### Return type
 
@@ -1184,7 +1114,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## TriggerAlert
 
 > HttpResponse TriggerAlert(ctx, orgId, alertId).Execute()
@@ -1200,7 +1129,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -1221,22 +1150,18 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**alertId** | [**Ksuid**](.md) | Alert ID | 
+| Name        | Type                | Description                                                                 | Notes |
+| ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**   | **string**          | Organization name                                                           |
+| **alertId** | [**Ksuid**](.md)    | Alert ID                                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiTriggerAlertRequest struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -1255,7 +1180,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## TriggerAlert_0
 
 > HttpResponse TriggerAlert_0(ctx, orgId, streamName, alertName).Execute()
@@ -1271,7 +1195,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -1293,24 +1217,19 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
-**alertName** | **string** | Alert name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
+| **alertName**  | **string**          | Alert name                                                                  |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiTriggerAlert_5Request struct via the builder pattern
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
 ### Return type
 
@@ -1329,7 +1248,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## UpdateAlert
 
 > HttpResponse UpdateAlert(ctx, orgId, alertId).Body(body).Execute()
@@ -1345,7 +1263,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -1367,23 +1285,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**alertId** | [**Ksuid**](.md) | Alert ID | 
+| Name        | Type                | Description                                                                 | Notes |
+| ----------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**     | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**   | **string**          | Organization name                                                           |
+| **alertId** | [**Ksuid**](.md)    | Alert ID                                                                    |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUpdateAlertRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **body** | **Alert** | Alert data | 
+**body** | **Alert** | Alert data |
 
 ### Return type
 
@@ -1402,7 +1317,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## UpdateAlert_0
 
 > HttpResponse UpdateAlert_0(ctx, orgId, streamName, alertName).Alert(alert).Execute()
@@ -1418,7 +1332,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -1441,25 +1355,21 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**streamName** | **string** | Stream name | 
-**alertName** | **string** | Alert name | 
+| Name           | Type                | Description                                                                 | Notes |
+| -------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**        | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**      | **string**          | Organization name                                                           |
+| **streamName** | **string**          | Stream name                                                                 |
+| **alertName**  | **string**          | Alert name                                                                  |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUpdateAlert_6Request struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-
- **alert** | [**Alert**](Alert.md) | Alert data | 
+**alert** | [**Alert**](Alert.md) | Alert data |
 
 ### Return type
 
@@ -1478,7 +1388,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## UpdateDestination
 
 > HttpResponse UpdateDestination(ctx, orgId, destinationName).Destination(destination).Execute()
@@ -1494,7 +1403,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -1516,23 +1425,20 @@ func main() {
 
 ### Path Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**orgId** | **string** | Organization name | 
-**destinationName** | **string** | Destination name | 
+| Name                | Type                | Description                                                                 | Notes |
+| ------------------- | ------------------- | --------------------------------------------------------------------------- | ----- |
+| **ctx**             | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |
+| **orgId**           | **string**          | Organization name                                                           |
+| **destinationName** | **string**          | Destination name                                                            |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUpdateDestinationRequest struct via the builder pattern
 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **destination** | [**Destination**](Destination.md) | Destination data | 
+**destination** | [**Destination**](Destination.md) | Destination data |
 
 ### Return type
 
@@ -1550,4 +1456,3 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

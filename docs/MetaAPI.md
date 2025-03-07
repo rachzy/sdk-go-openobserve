@@ -1,12 +1,10 @@
 # \MetaAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**Healthz**](MetaAPI.md#Healthz) | **Get** /healthz | Healthz
-
-
+| Method                            | HTTP request     | Description |
+| --------------------------------- | ---------------- | ----------- |
+| [**Healthz**](MetaAPI.md#Healthz) | **Get** /healthz | Healthz     |
 
 ## Healthz
 
@@ -23,7 +21,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 )
 
 func main() {
@@ -48,7 +46,6 @@ This endpoint does not need any parameter.
 
 Other parameters are passed through a pointer to a apiHealthzRequest struct via the builder pattern
 
-
 ### Return type
 
 [**HealthzResponse**](HealthzResponse.md)
@@ -65,4 +62,3 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-
