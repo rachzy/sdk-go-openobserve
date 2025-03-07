@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_FunctionsAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_FunctionsAPIService(t *testing.T) {
 
 	t.Run("Test FunctionsAPIService CreateFunction", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -38,7 +39,7 @@ func Test_openapi_FunctionsAPIService(t *testing.T) {
 
 	t.Run("Test FunctionsAPIService CreateUpdateEnrichmentTable", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var tableName string
@@ -53,7 +54,7 @@ func Test_openapi_FunctionsAPIService(t *testing.T) {
 
 	t.Run("Test FunctionsAPIService DeleteFunction", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var name string
@@ -68,7 +69,7 @@ func Test_openapi_FunctionsAPIService(t *testing.T) {
 
 	t.Run("Test FunctionsAPIService FunctionPipelineDependency", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var name string
@@ -83,7 +84,7 @@ func Test_openapi_FunctionsAPIService(t *testing.T) {
 
 	t.Run("Test FunctionsAPIService ListFunctions", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -97,7 +98,7 @@ func Test_openapi_FunctionsAPIService(t *testing.T) {
 
 	t.Run("Test FunctionsAPIService TestFunction", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -111,7 +112,7 @@ func Test_openapi_FunctionsAPIService(t *testing.T) {
 
 	t.Run("Test FunctionsAPIService UpdateFunction", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var name string

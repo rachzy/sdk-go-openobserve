@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_SearchAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_SearchAPIService(t *testing.T) {
 
 	t.Run("Test SearchAPIService SearchAround", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var streamName string
@@ -39,7 +40,7 @@ func Test_openapi_SearchAPIService(t *testing.T) {
 
 	t.Run("Test SearchAPIService SearchAroundV2", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var streamName string
@@ -54,7 +55,7 @@ func Test_openapi_SearchAPIService(t *testing.T) {
 
 	t.Run("Test SearchAPIService SearchHistory", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -68,7 +69,7 @@ func Test_openapi_SearchAPIService(t *testing.T) {
 
 	t.Run("Test SearchAPIService SearchPartition", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -82,7 +83,7 @@ func Test_openapi_SearchAPIService(t *testing.T) {
 
 	t.Run("Test SearchAPIService SearchSQL", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -96,7 +97,7 @@ func Test_openapi_SearchAPIService(t *testing.T) {
 
 	t.Run("Test SearchAPIService SearchValues", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var streamName string

@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_FoldersAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_FoldersAPIService(t *testing.T) {
 
 	t.Run("Test FoldersAPIService CreateFolder", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var folderType FolderType
@@ -39,7 +40,7 @@ func Test_openapi_FoldersAPIService(t *testing.T) {
 
 	t.Run("Test FoldersAPIService CreateFolder_1", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -53,7 +54,7 @@ func Test_openapi_FoldersAPIService(t *testing.T) {
 
 	t.Run("Test FoldersAPIService DeleteFolder", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var folderType FolderType
@@ -69,7 +70,7 @@ func Test_openapi_FoldersAPIService(t *testing.T) {
 
 	t.Run("Test FoldersAPIService DeleteFolder_2", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var folderId string
@@ -84,7 +85,7 @@ func Test_openapi_FoldersAPIService(t *testing.T) {
 
 	t.Run("Test FoldersAPIService GetFolder", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var folderType FolderType
@@ -100,7 +101,7 @@ func Test_openapi_FoldersAPIService(t *testing.T) {
 
 	t.Run("Test FoldersAPIService GetFolderByName", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var folderType FolderType
@@ -116,7 +117,7 @@ func Test_openapi_FoldersAPIService(t *testing.T) {
 
 	t.Run("Test FoldersAPIService GetFolderByName_3", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var folderName string
@@ -131,7 +132,7 @@ func Test_openapi_FoldersAPIService(t *testing.T) {
 
 	t.Run("Test FoldersAPIService GetFolder_4", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var folderId string
@@ -146,7 +147,7 @@ func Test_openapi_FoldersAPIService(t *testing.T) {
 
 	t.Run("Test FoldersAPIService ListFolders", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var folderType FolderType
@@ -161,7 +162,7 @@ func Test_openapi_FoldersAPIService(t *testing.T) {
 
 	t.Run("Test FoldersAPIService ListFolders_5", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -175,7 +176,7 @@ func Test_openapi_FoldersAPIService(t *testing.T) {
 
 	t.Run("Test FoldersAPIService UpdateFolder", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var folderType FolderType
@@ -191,7 +192,7 @@ func Test_openapi_FoldersAPIService(t *testing.T) {
 
 	t.Run("Test FoldersAPIService UpdateFolder_6", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var folderId string

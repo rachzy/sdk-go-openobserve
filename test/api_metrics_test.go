@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_MetricsAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_MetricsAPIService(t *testing.T) {
 
 	t.Run("Test MetricsAPIService MetricsIngestionJson", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -38,7 +39,7 @@ func Test_openapi_MetricsAPIService(t *testing.T) {
 
 	t.Run("Test MetricsAPIService PrometheusFormatQuery", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -52,7 +53,7 @@ func Test_openapi_MetricsAPIService(t *testing.T) {
 
 	t.Run("Test MetricsAPIService PrometheusLabelValues", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var labelName string
@@ -67,7 +68,7 @@ func Test_openapi_MetricsAPIService(t *testing.T) {
 
 	t.Run("Test MetricsAPIService PrometheusLabels", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -81,7 +82,7 @@ func Test_openapi_MetricsAPIService(t *testing.T) {
 
 	t.Run("Test MetricsAPIService PrometheusMetadata", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -95,7 +96,7 @@ func Test_openapi_MetricsAPIService(t *testing.T) {
 
 	t.Run("Test MetricsAPIService PrometheusQuery", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -109,7 +110,7 @@ func Test_openapi_MetricsAPIService(t *testing.T) {
 
 	t.Run("Test MetricsAPIService PrometheusRangeQuery", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -123,7 +124,7 @@ func Test_openapi_MetricsAPIService(t *testing.T) {
 
 	t.Run("Test MetricsAPIService PrometheusRemoteWrite", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -137,7 +138,7 @@ func Test_openapi_MetricsAPIService(t *testing.T) {
 
 	t.Run("Test MetricsAPIService PrometheusSeries", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 

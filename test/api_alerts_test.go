@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_AlertsAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService CreateAlert", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -38,7 +39,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService CreateDestination", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -52,7 +53,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService DeleteAlert", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var alertId Ksuid
@@ -67,7 +68,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService DeleteAlertDestination", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var destinationName string
@@ -82,7 +83,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService DeleteAlert_1", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var streamName string
@@ -98,7 +99,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService EnableAlert", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var alertId Ksuid
@@ -113,7 +114,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService EnableAlert_2", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var streamName string
@@ -129,7 +130,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService GetAlert", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var alertId Ksuid
@@ -144,7 +145,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService GetAlert_3", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var streamName string
@@ -160,7 +161,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService GetDestination", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var destinationName string
@@ -175,7 +176,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService ListAlerts", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -189,7 +190,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService ListAlerts_4", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -203,7 +204,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService ListDestinations", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -217,7 +218,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService ListStreamAlerts", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var streamName string
@@ -232,7 +233,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService MoveAlerts", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -246,7 +247,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService SaveAlert", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var streamName string
@@ -261,7 +262,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService TriggerAlert", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var alertId Ksuid
@@ -276,7 +277,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService TriggerAlert_5", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var streamName string
@@ -292,7 +293,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService UpdateAlert", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var alertId Ksuid
@@ -307,7 +308,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService UpdateAlert_6", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var streamName string
@@ -323,7 +324,7 @@ func Test_openapi_AlertsAPIService(t *testing.T) {
 
 	t.Run("Test AlertsAPIService UpdateDestination", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var destinationName string

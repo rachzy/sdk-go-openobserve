@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/rachzy/sdk-go-openobserve"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_DashboardsAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_DashboardsAPIService(t *testing.T) {
 
 	t.Run("Test DashboardsAPIService CreateAnnotations", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var dashboardId string
@@ -39,7 +40,7 @@ func Test_openapi_DashboardsAPIService(t *testing.T) {
 
 	t.Run("Test DashboardsAPIService CreateDashboard", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -53,7 +54,7 @@ func Test_openapi_DashboardsAPIService(t *testing.T) {
 
 	t.Run("Test DashboardsAPIService DeleteAnnotations", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var dashboardId string
@@ -67,7 +68,7 @@ func Test_openapi_DashboardsAPIService(t *testing.T) {
 
 	t.Run("Test DashboardsAPIService DeleteDashboard", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var dashboardId string
@@ -82,7 +83,7 @@ func Test_openapi_DashboardsAPIService(t *testing.T) {
 
 	t.Run("Test DashboardsAPIService GetAnnotations", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var dashboardId string
@@ -97,7 +98,7 @@ func Test_openapi_DashboardsAPIService(t *testing.T) {
 
 	t.Run("Test DashboardsAPIService GetDashboard", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var dashboardId string
@@ -112,7 +113,7 @@ func Test_openapi_DashboardsAPIService(t *testing.T) {
 
 	t.Run("Test DashboardsAPIService ListDashboards", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -126,7 +127,7 @@ func Test_openapi_DashboardsAPIService(t *testing.T) {
 
 	t.Run("Test DashboardsAPIService MoveDashboard", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var dashboardId string
@@ -141,7 +142,7 @@ func Test_openapi_DashboardsAPIService(t *testing.T) {
 
 	t.Run("Test DashboardsAPIService MoveDashboards", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -155,7 +156,7 @@ func Test_openapi_DashboardsAPIService(t *testing.T) {
 
 	t.Run("Test DashboardsAPIService RemoveTimedAnnotationFromPanel", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var dashboardId string
@@ -170,7 +171,7 @@ func Test_openapi_DashboardsAPIService(t *testing.T) {
 
 	t.Run("Test DashboardsAPIService UpdateAnnotations", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var dashboardId string
@@ -185,7 +186,7 @@ func Test_openapi_DashboardsAPIService(t *testing.T) {
 
 	t.Run("Test DashboardsAPIService UpdateDashboard", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 		var dashboardId string
