@@ -18,12 +18,13 @@ Install the following dependencies:
 ```sh
 go get github.com/stretchr/testify/assert
 go get golang.org/x/net/context
+go get github.com/rachzy/sdk-go-openobserve
 ```
 
 Put the package under your project folder and add the following in import:
 
 ```go
-import openapi "github.com/rachzy/sdk-go-openobserve"
+import openobserve "github.com/rachzy/sdk-go-openobserve"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:
