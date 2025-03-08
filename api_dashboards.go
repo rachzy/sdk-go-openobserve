@@ -159,16 +159,16 @@ type ApiCreateDashboardRequest struct {
 	ctx context.Context
 	ApiService *DashboardsAPIService
 	orgId string
-	body *JsonValue
+	body *interface{}
 }
 
 // Dashboard details
-func (r ApiCreateDashboardRequest) Body(body JsonValue) ApiCreateDashboardRequest {
+func (r ApiCreateDashboardRequest) Body(body interface{}) ApiCreateDashboardRequest {
 	r.body = &body
 	return r
 }
 
-func (r ApiCreateDashboardRequest) Execute() (*DashboardDetails, *http.Response, error) {
+func (r ApiCreateDashboardRequest) Execute() (*interface{}, *http.Response, error) {
 	return r.ApiService.CreateDashboardExecute(r)
 }
 
@@ -188,13 +188,13 @@ func (a *DashboardsAPIService) CreateDashboard(ctx context.Context, orgId string
 }
 
 // Execute executes the request
-//  @return DashboardDetails
-func (a *DashboardsAPIService) CreateDashboardExecute(r ApiCreateDashboardRequest) (*DashboardDetails, *http.Response, error) {
+//  @return interface{}
+func (a *DashboardsAPIService) CreateDashboardExecute(r ApiCreateDashboardRequest) (*interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *DashboardDetails
+		localVarReturnValue  *interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DashboardsAPIService.CreateDashboard")
@@ -710,7 +710,7 @@ type ApiGetDashboardRequest struct {
 	dashboardId string
 }
 
-func (r ApiGetDashboardRequest) Execute() (*DashboardDetails, *http.Response, error) {
+func (r ApiGetDashboardRequest) Execute() (*interface{}, *http.Response, error) {
 	return r.ApiService.GetDashboardExecute(r)
 }
 
@@ -732,13 +732,13 @@ func (a *DashboardsAPIService) GetDashboard(ctx context.Context, orgId string, d
 }
 
 // Execute executes the request
-//  @return DashboardDetails
-func (a *DashboardsAPIService) GetDashboardExecute(r ApiGetDashboardRequest) (*DashboardDetails, *http.Response, error) {
+//  @return interface{}
+func (a *DashboardsAPIService) GetDashboardExecute(r ApiGetDashboardRequest) (*interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *DashboardDetails
+		localVarReturnValue  *interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DashboardsAPIService.GetDashboard")
@@ -1519,16 +1519,16 @@ type ApiUpdateDashboardRequest struct {
 	ApiService *DashboardsAPIService
 	orgId string
 	dashboardId string
-	body *JsonValue
+	body *interface{}
 }
 
 // Dashboard details
-func (r ApiUpdateDashboardRequest) Body(body JsonValue) ApiUpdateDashboardRequest {
+func (r ApiUpdateDashboardRequest) Body(body interface{}) ApiUpdateDashboardRequest {
 	r.body = &body
 	return r
 }
 
-func (r ApiUpdateDashboardRequest) Execute() (*DashboardDetails, *http.Response, error) {
+func (r ApiUpdateDashboardRequest) Execute() (*interface{}, *http.Response, error) {
 	return r.ApiService.UpdateDashboardExecute(r)
 }
 
@@ -1550,13 +1550,13 @@ func (a *DashboardsAPIService) UpdateDashboard(ctx context.Context, orgId string
 }
 
 // Execute executes the request
-//  @return DashboardDetails
-func (a *DashboardsAPIService) UpdateDashboardExecute(r ApiUpdateDashboardRequest) (*DashboardDetails, *http.Response, error) {
+//  @return interface{}
+func (a *DashboardsAPIService) UpdateDashboardExecute(r ApiUpdateDashboardRequest) (*interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPut
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *DashboardDetails
+		localVarReturnValue  *interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DashboardsAPIService.UpdateDashboard")
