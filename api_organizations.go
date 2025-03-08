@@ -629,11 +629,11 @@ type ApiOrganizationSettingCreateRequest struct {
 	ctx context.Context
 	ApiService *OrganizationsAPIService
 	orgId string
-	body *OrganizationSettingPayload
+	body *OrganizationSetting
 }
 
 // Organization settings
-func (r ApiOrganizationSettingCreateRequest) Body(body OrganizationSettingPayload) ApiOrganizationSettingCreateRequest {
+func (r ApiOrganizationSettingCreateRequest) Body(body OrganizationSetting) ApiOrganizationSettingCreateRequest {
 	r.body = &body
 	return r
 }
