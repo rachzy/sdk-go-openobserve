@@ -471,8 +471,10 @@ func (c *APIClient) prepareRequest(
 		// add context to the request
 		localVarRequest = localVarRequest.WithContext(ctx)
 
-		// Walk through any authentication.
-
+		// Basic HTTP Authentication
+		if auth, ok := ctx.Value(ContextAPIKeys).(BasicAuth); ok {
+			localVarRequest.SetBasicAuth(auth.UserName, auth.Password)
+		}
 	}
 
 	for header, value := range c.cfg.DefaultHeader {
