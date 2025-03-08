@@ -38,7 +38,7 @@ func (r ApiCreateFolderRequest) CreateFolderRequestBody(createFolderRequestBody 
 	return r
 }
 
-func (r ApiCreateFolderRequest) Execute() (*Folder, *http.Response, error) {
+func (r ApiCreateFolderRequest) Execute() (*FolderType, *http.Response, error) {
 	return r.ApiService.CreateFolderExecute(r)
 }
 
@@ -61,12 +61,12 @@ func (a *FoldersAPIService) CreateFolder(ctx context.Context, orgId string, fold
 
 // Execute executes the request
 //  @return Folder
-func (a *FoldersAPIService) CreateFolderExecute(r ApiCreateFolderRequest) (*Folder, *http.Response, error) {
+func (a *FoldersAPIService) CreateFolderExecute(r ApiCreateFolderRequest) (*FolderType, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *Folder
+		localVarReturnValue  *FolderType
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FoldersAPIService.CreateFolder")
@@ -178,7 +178,7 @@ func (r ApiCreateFolder_0Request) CreateFolderRequestBody(createFolderRequestBod
 	return r
 }
 
-func (r ApiCreateFolder_0Request) Execute() (*Folder, *http.Response, error) {
+func (r ApiCreateFolder_0Request) Execute() (*FolderType, *http.Response, error) {
 	return r.ApiService.CreateFolder_1Execute(r)
 }
 
@@ -202,12 +202,12 @@ func (a *FoldersAPIService) CreateFolder_1(ctx context.Context, orgId string) Ap
 // Execute executes the request
 //  @return Folder
 // Deprecated
-func (a *FoldersAPIService) CreateFolder_1Execute(r ApiCreateFolder_0Request) (*Folder, *http.Response, error) {
+func (a *FoldersAPIService) CreateFolder_1Execute(r ApiCreateFolder_0Request) (*FolderType, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *Folder
+		localVarReturnValue  *FolderType
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FoldersAPIService.CreateFolder_1")
@@ -600,7 +600,7 @@ type ApiGetFolderRequest struct {
 	folderId string
 }
 
-func (r ApiGetFolderRequest) Execute() (*Folder, *http.Response, error) {
+func (r ApiGetFolderRequest) Execute() (*FolderType, *http.Response, error) {
 	return r.ApiService.GetFolderExecute(r)
 }
 
@@ -625,12 +625,12 @@ func (a *FoldersAPIService) GetFolder(ctx context.Context, orgId string, folderT
 
 // Execute executes the request
 //  @return Folder
-func (a *FoldersAPIService) GetFolderExecute(r ApiGetFolderRequest) (*Folder, *http.Response, error) {
+func (a *FoldersAPIService) GetFolderExecute(r ApiGetFolderRequest) (*FolderType, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *Folder
+		localVarReturnValue  *FolderType
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FoldersAPIService.GetFolder")
@@ -733,7 +733,7 @@ type ApiGetFolderByNameRequest struct {
 	folderName string
 }
 
-func (r ApiGetFolderByNameRequest) Execute() (*Folder, *http.Response, error) {
+func (r ApiGetFolderByNameRequest) Execute() (*FolderType, *http.Response, error) {
 	return r.ApiService.GetFolderByNameExecute(r)
 }
 
@@ -758,12 +758,12 @@ func (a *FoldersAPIService) GetFolderByName(ctx context.Context, orgId string, f
 
 // Execute executes the request
 //  @return Folder
-func (a *FoldersAPIService) GetFolderByNameExecute(r ApiGetFolderByNameRequest) (*Folder, *http.Response, error) {
+func (a *FoldersAPIService) GetFolderByNameExecute(r ApiGetFolderByNameRequest) (*FolderType, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *Folder
+		localVarReturnValue  *FolderType
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FoldersAPIService.GetFolderByName")
@@ -865,7 +865,7 @@ type ApiGetFolderByName_0Request struct {
 	folderName string
 }
 
-func (r ApiGetFolderByName_0Request) Execute() (*Folder, *http.Response, error) {
+func (r ApiGetFolderByName_0Request) Execute() (*FolderType, *http.Response, error) {
 	return r.ApiService.GetFolderByName_3Execute(r)
 }
 
@@ -891,12 +891,12 @@ func (a *FoldersAPIService) GetFolderByName_3(ctx context.Context, orgId string,
 // Execute executes the request
 //  @return Folder
 // Deprecated
-func (a *FoldersAPIService) GetFolderByName_3Execute(r ApiGetFolderByName_0Request) (*Folder, *http.Response, error) {
+func (a *FoldersAPIService) GetFolderByName_3Execute(r ApiGetFolderByName_0Request) (*FolderType, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *Folder
+		localVarReturnValue  *FolderType
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FoldersAPIService.GetFolderByName_3")
@@ -997,7 +997,7 @@ type ApiGetFolder_0Request struct {
 	folderId string
 }
 
-func (r ApiGetFolder_0Request) Execute() (*Folder, *http.Response, error) {
+func (r ApiGetFolder_0Request) Execute() (*FolderType, *http.Response, error) {
 	return r.ApiService.GetFolder_4Execute(r)
 }
 
@@ -1023,12 +1023,12 @@ func (a *FoldersAPIService) GetFolder_4(ctx context.Context, orgId string, folde
 // Execute executes the request
 //  @return Folder
 // Deprecated
-func (a *FoldersAPIService) GetFolder_4Execute(r ApiGetFolder_0Request) (*Folder, *http.Response, error) {
+func (a *FoldersAPIService) GetFolder_4Execute(r ApiGetFolder_0Request) (*FolderType, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *Folder
+		localVarReturnValue  *FolderType
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FoldersAPIService.GetFolder_4")
@@ -1365,11 +1365,11 @@ type ApiUpdateFolderRequest struct {
 	orgId string
 	folderType FolderType
 	folderId string
-	body *Folder
+	body *FolderType
 }
 
 // Folder details
-func (r ApiUpdateFolderRequest) Body(body Folder) ApiUpdateFolderRequest {
+func (r ApiUpdateFolderRequest) Body(body FolderType) ApiUpdateFolderRequest {
 	r.body = &body
 	return r
 }
@@ -1509,11 +1509,11 @@ type ApiUpdateFolder_0Request struct {
 	ApiService *FoldersAPIService
 	orgId string
 	folderId string
-	body *Folder
+	body *FolderType
 }
 
 // Folder details
-func (r ApiUpdateFolder_0Request) Body(body Folder) ApiUpdateFolder_0Request {
+func (r ApiUpdateFolder_0Request) Body(body FolderType) ApiUpdateFolder_0Request {
 	r.body = &body
 	return r
 }
